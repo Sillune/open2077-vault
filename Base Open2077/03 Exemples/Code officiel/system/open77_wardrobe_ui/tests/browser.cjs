@@ -1,0 +1,57 @@
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const fs=require('fs');const path=require('path');const assert=require('node:assert/strict');
+(async()=>{
+ const browser=await chromium.launch({headless:true,executablePath:process.env.OP77_TEST_BROWSER || undefined});
+ const page=await browser.newPage({viewport:{width:1920,height:1080}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.addInitScript(()=>{window.events=[];window.handlers={};window.Open77={ready:()=>{},on:(n,cb)=>window.handlers[n]=cb,emit:(n,v)=>{window.events.push({n,v});if(n==='wardrobe:preview')setTimeout(()=>window.handlers['wardrobe:previewResult']({ok:true}),5);}};});
+ await page.goto('file:///'+path.resolve('resources/system/open77_wardrobe_ui/web/index.html').replaceAll('\\','/'));
+ const nonvisual=new Set([...fs.readFileSync('client/src/game/generated/EmptyClothing.inl','utf8').matchAll(/ULL, \/\/ (Items\.[^\r\n]+)/g)].map(m=>m[1]));
+ const items=JSON.parse(fs.readFileSync('docs/generated/clothing-2.31.json','utf8')).items.filter(x=>x.defaultSelectable && x.supportsFemale).map(x=>({record:x.record,tweakDbId:x.tweakDbId,nonvisual:nonvisual.has(x.record),slot:({head:'Head',face:'Face',inner_chest:'InnerChest',outer_chest:'OuterChest',legs:'Legs',feet:'Feet',outfit:'Outfit'})[x.slot]}));
+ await page.evaluate(items=>{handlers['wardrobe:open']({available:true,characterKey:'wardrobe-ui-test',revision:5,family:'female',persistence:'ready',equipment:{Head:false,Face:'Items.EmptySlotsMask',UnderwearBottom:'Items.Underwear'},wardrobe:{active:false,outfits:[],names:[]},orbitAvailable:true});handlers['wardrobe:catalogue']({items,complete:true});},items);
+ await page.locator('#search').focus();await page.keyboard.type('test');await page.keyboard.press('End');await page.keyboard.press('Backspace');
+ assert.equal(await page.evaluate(()=>events.filter(x=>x.n==='wardrobe:activity').length),1,'typing produces one throttled idle keepalive');
+ assert.equal(await page.evaluate(()=>events.some(x=>x.n==='wardrobe:close')),false,'End and Backspace must not close the menu');
+ await page.locator('#search').fill('');
+ await page.getByRole('button',{name:'EYEWEAR',exact:true}).click();assert.equal(await page.locator('#selected-name').textContent(),'No item equipped');await page.getByRole('button',{name:'HEADWEAR',exact:true}).click();
+ await page.evaluate(()=>handlers['wardrobe:favorites']({items:[],available:true}));
+ await page.locator('.favorite').first().click();
+ const favorite=await page.evaluate(()=>events.findLast(x=>x.n==='wardrobe:favorite').v);
+ assert.equal(favorite.enabled,true);assert.equal(await page.locator('.favorite.on').count(),0,'star waits for durable acknowledgement');
+ await page.evaluate(record=>handlers['wardrobe:favorites']({items:[record],available:true}),favorite.record);
+ assert.equal(await page.locator('.favorite.on').count(),1);
+ await page.locator('.favorite.on').click();
+ await page.evaluate(record=>handlers['wardrobe:favorites']({items:[record],available:true,error:'storage_commit_failed'}),favorite.record);
+ assert.equal(await page.locator('.favorite.on').count(),1,'failed write preserves confirmed favorite');
+ assert.match(await page.locator('#status').textContent(),/could not be saved/);
+ await page.locator('#search').fill('Balaclava');await page.locator('.choose').first().click();await page.waitForTimeout(30);assert.equal(await page.locator('#save').isDisabled(),false);
+ await page.locator('#outfits-tab').click();await page.locator('#capture').click();await page.waitForTimeout(30);await page.locator('#outfit-name').fill('Night shift');await page.locator('#rename').click();await page.locator('#remove').click();await page.waitForTimeout(30);
+ await page.locator('#save').click();const request=await page.evaluate(()=>events.findLast(x=>x.n==='wardrobe:save').v);assert.equal(request.characterKey,'wardrobe-ui-test');assert.equal(request.expectedRevision,5);assert.equal(request.wardrobe.names[0],'Night shift');assert.equal(request.wardrobe.outfits[0].Head,false);assert.equal(request.wardrobe.outfits[0].Face,false,'copy worn converts legacy nonvisual templates to explicit empty visual slots');assert.equal(request.wardrobe.active,0);assert.equal(Object.hasOwn(request.equipment,'UnderwearBottom'),false);
+ await page.evaluate(()=>handlers['wardrobe:saveFailed']({reason:'save_timeout'}));await page.locator('#cancel').click();assert.equal(await page.locator('#confirm').isVisible(),true);await page.locator('#confirm-no').click();
+ await page.locator('#search').fill('');await page.screenshot({path:'.verify/wardrobe-1920.png'});
+ for(const [width,height] of [[1280,720],[1920,1080]]){await page.setViewportSize({width,height});const bounds=await page.locator('#save').boundingBox();assert.ok(bounds.y+bounds.height<=height,JSON.stringify(bounds));}
+ await page.evaluate(items=>{handlers['wardrobe:open']({available:true,characterKey:'covered-shirt',revision:9,family:'female',equipment:{Outfit:'Items.Q303_diving_suit',UnderwearBottom:'Items.Underwear'},wardrobe:{active:0,outfits:{0:{Outfit:'Items.Jumpsuit_03_old_01'}}},orbitAvailable:true});handlers['wardrobe:catalogue']({items,complete:true});},items);
+ await page.getByRole('button',{name:'TOPS',exact:true}).click();await page.locator('#search').fill('FormalShirt');
+ await page.locator('.choose').first().click();await page.waitForTimeout(30);
+ const uncovered=await page.evaluate(()=>events.findLast(x=>x.n==='wardrobe:preview').v);
+ assert.equal(uncovered.wardrobe.active,false,'equipment selection must reveal the garment beneath a saved overlay');
+ assert.equal(uncovered.equipment.Outfit,false,'a full-body suit must not cover a selected shirt');
+ assert.ok(uncovered.equipment.InnerChest);assert.equal(uncovered.equipment.UnderwearBottom,'Items.Underwear');
+ assert.equal(uncovered.wardrobe.outfits[0].Outfit,'Items.Jumpsuit_03_old_01','saved outfit contents stay intact');
+ assert.equal(await page.locator('#overlay-banner').isVisible(),false);
+ await page.locator('#save').click();const visiblePatch=await page.evaluate(()=>events.findLast(x=>x.n==='wardrobe:save').v);
+ assert.equal(visiblePatch.wardrobe.active,false);assert.equal(visiblePatch.equipment.Outfit,false);
+ // A pack larger than the old native 2000-row cap stays searchable by its authored label.
+ await page.evaluate(()=>{
+   handlers['wardrobe:open']({available:true,characterKey:'custom-pack',revision:0,family:'female',equipment:{},wardrobe:{outfits:{}},orbitAvailable:true});
+   const rows=Array.from({length:3001},(_,i)=>({record:'Items.Modded_'+i,slot:'OuterChest',label:i===3000?'Velvet <b>midnight</b>':'Custom coat '+i}));
+   for(let offset=0;offset<rows.length;offset+=48) handlers['wardrobe:catalogue']({items:rows.slice(offset,offset+48),complete:offset+48>=rows.length});
+ });
+ await page.getByRole('button',{name:'JACKETS',exact:true}).click();
+ await page.locator('#search').fill('Velvet');
+ assert.equal(await page.locator('.choose').count(),1);
+ assert.equal(await page.locator('.choose strong').textContent(),'Velvet <b>midnight</b>');
+ assert.equal(await page.locator('.choose b').count(),0,'custom labels remain literal text');
+ await page.locator('.choose').click(); await page.waitForTimeout(30);
+ assert.equal((await page.evaluate(()=>events.findLast(x=>x.n==='wardrobe:preview').v)).equipment.OuterChest,'Items.Modded_3000');
+ assert.deepEqual(errors,[]);console.log('Wardrobe browser: favorites, catalogue, previews, outfits, covered-shirt selection, commit patch, discard and layout passed.');await browser.close();
+})().catch(e=>{console.error(e);process.exit(1);});

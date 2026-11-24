@@ -1,0 +1,1732 @@
+{
+  "docs.md": {
+    "url": "https://open2077.net/docs.md",
+    "bytes": 22045,
+    "sha256": "189ade71280cb65f1ff56fa528f7cfc0e504a86a0e975420d46782140823e630"
+  },
+  "docs/alpha-access.md": {
+    "url": "https://open2077.net/docs/alpha-access.md",
+    "bytes": 5383,
+    "sha256": "b31ee96c184b0fed074e226d9c586d9e0e438640938a7b19c8828f5bf566cc1e"
+  },
+  "docs/platform.md": {
+    "url": "https://open2077.net/docs/platform.md",
+    "bytes": 9516,
+    "sha256": "e19d6f8ea867f38d1793b073188985b83d09986d58ef573d25285c144031bff6"
+  },
+  "docs/launcher.md": {
+    "url": "https://open2077.net/docs/launcher.md",
+    "bytes": 25195,
+    "sha256": "d6a158a68883e934749fa55c1a380e4b2e2689bd7e7e98098a4fb8997d37ad50"
+  },
+  "docs/community-hub.md": {
+    "url": "https://open2077.net/docs/community-hub.md",
+    "bytes": 20546,
+    "sha256": "6d4531d69167ab266f770264f96d2578b516233f4de86e5e4af6b46a57b5f964"
+  },
+  "docs/host-a-server.md": {
+    "url": "https://open2077.net/docs/host-a-server.md",
+    "bytes": 8123,
+    "sha256": "9fb4641bcc859b6b42732da60c9277d817cd416a1ca636f1ca8707f69e25b3b9"
+  },
+  "docs/server-startup.md": {
+    "url": "https://open2077.net/docs/server-startup.md",
+    "bytes": 11595,
+    "sha256": "5fce5fca0e10da59b4ec400a35cbafff413f6b63427271c866d702f710304730"
+  },
+  "docs/server-licensing.md": {
+    "url": "https://open2077.net/docs/server-licensing.md",
+    "bytes": 4974,
+    "sha256": "1bee17e5f8364d5e50935fe26e1dce13bab35b207aa8fd028b54491094476ebf"
+  },
+  "docs/database.md": {
+    "url": "https://open2077.net/docs/database.md",
+    "bytes": 13190,
+    "sha256": "dbab5428b4f987b6a70f29320f47633fe5d3837de48ae406091bfd1a0f22b053"
+  },
+  "docs/launcher-for-server-owners.md": {
+    "url": "https://open2077.net/docs/launcher-for-server-owners.md",
+    "bytes": 12867,
+    "sha256": "7a91f71379d9be679d63609bacd3777943c9cfb9ca54a08647e571ba4a1ea9ca"
+  },
+  "docs/connection-preflight.md": {
+    "url": "https://open2077.net/docs/connection-preflight.md",
+    "bytes": 26235,
+    "sha256": "18b28cb1bc7b99f2e4ba9ae27cef92698f838ff94f7b3a83615bf7676d6c3dde"
+  },
+  "docs/server-branding.md": {
+    "url": "https://open2077.net/docs/server-branding.md",
+    "bytes": 6375,
+    "sha256": "eea14a5edeabe0d2321e6949ba1156e7b53b20fa7ef1f5f28f0010bd1bb61dac"
+  },
+  "docs/launcher-text-formatting.md": {
+    "url": "https://open2077.net/docs/launcher-text-formatting.md",
+    "bytes": 5444,
+    "sha256": "3ee1d4c6e407f5d3c8870203641327c62ac798e511c9de7686ebdcecff8e4941"
+  },
+  "docs/warden.md": {
+    "url": "https://open2077.net/docs/warden.md",
+    "bytes": 4169,
+    "sha256": "9bd6c2e59bab8c240c3c7b954cdedcbc8f847c038363a2c50d1e0dc81341fb30"
+  },
+  "docs/rcon.md": {
+    "url": "https://open2077.net/docs/rcon.md",
+    "bytes": 20202,
+    "sha256": "aeba75018b98ef2faeb7baf490203f18ab6633c0b7a191e8058f06432bbed8c7"
+  },
+  "docs/metrics.md": {
+    "url": "https://open2077.net/docs/metrics.md",
+    "bytes": 16762,
+    "sha256": "b24b3af910019680f0bd69bc1406bdd8c4c28f191eb6aab23416f8e0b5fd83e8"
+  },
+  "docs/community-hub-warden.md": {
+    "url": "https://open2077.net/docs/community-hub-warden.md",
+    "bytes": 15106,
+    "sha256": "559ce47062af6e96ce8783830a811271cf94052bc3fd8a5c23fe2864f18de898"
+  },
+  "docs/warden-players.md": {
+    "url": "https://open2077.net/docs/warden-players.md",
+    "bytes": 8078,
+    "sha256": "567fdc7ef7f907efbb02237e1017d534ce6a16ded84639905d573b31a66a6d53"
+  },
+  "docs/server-resources.md": {
+    "url": "https://open2077.net/docs/server-resources.md",
+    "bytes": 17806,
+    "sha256": "76473a28bb3c2b475b8abd0244a24a85ea228e8e705b7a3a79b8703567c109c3"
+  },
+  "docs/resource-runtime.md": {
+    "url": "https://open2077.net/docs/resource-runtime.md",
+    "bytes": 41086,
+    "sha256": "dff0a31197ce838ff39d6920d11371bb49d09276788adfb3daf345b9f7455237"
+  },
+  "docs/lua-modules.md": {
+    "url": "https://open2077.net/docs/lua-modules.md",
+    "bytes": 10387,
+    "sha256": "76a6c935152606bbf008013bd7b37c0f93cc80d2f917f05c3a3cae5f25a9ea1a"
+  },
+  "docs/vectors.md": {
+    "url": "https://open2077.net/docs/vectors.md",
+    "bytes": 9906,
+    "sha256": "5b0da2632b7f798fed9f60b0d8e41b0fd5d627c11f8a3b1cfe125cb4ed73fe0d"
+  },
+  "docs/server-exports.md": {
+    "url": "https://open2077.net/docs/server-exports.md",
+    "bytes": 12405,
+    "sha256": "a9757a29495fc079d713bbd097bfda7863d15dc9e2c372ffb81c1ad614323235"
+  },
+  "docs/resource-exports.md": {
+    "url": "https://open2077.net/docs/resource-exports.md",
+    "bytes": 49843,
+    "sha256": "cb527d851d72b7198761e7940bfa70fffa490bc62c3c94bce131741292b530c8"
+  },
+  "docs/fivem-compatibility.md": {
+    "url": "https://open2077.net/docs/fivem-compatibility.md",
+    "bytes": 45766,
+    "sha256": "362babb1347dd17a105eb7b77281f9ab93ccb3c3040988e11b49d460807c3b7d"
+  },
+  "docs/sqlite.md": {
+    "url": "https://open2077.net/docs/sqlite.md",
+    "bytes": 15970,
+    "sha256": "8ddbeec6572d653337347ef1ddb660b24a2c8d4e9c5cc96a4255a3e086ecf3fe"
+  },
+  "docs/redis.md": {
+    "url": "https://open2077.net/docs/redis.md",
+    "bytes": 27593,
+    "sha256": "555f73ee88ea9d6571f4413487e61125cf84e215bc4e6e75f90794d741e8fab0"
+  },
+  "docs/http-client.md": {
+    "url": "https://open2077.net/docs/http-client.md",
+    "bytes": 16519,
+    "sha256": "bcd2e5e5941c6e1f534e9cd55702c1ca047cc05da05dcc8f3d362838e4ffca07"
+  },
+  "docs/identity.md": {
+    "url": "https://open2077.net/docs/identity.md",
+    "bytes": 7600,
+    "sha256": "3a5e9f41aa0564f649cc895bc9ee665ca678dad9ddaf299bdb40c0d1dbe7794f"
+  },
+  "docs/connection-control.md": {
+    "url": "https://open2077.net/docs/connection-control.md",
+    "bytes": 36227,
+    "sha256": "69fb58c344ea10d7e36aef33fb25901d0ab819d220c8560da803cf3c64a54c28"
+  },
+  "docs/preflight-lua.md": {
+    "url": "https://open2077.net/docs/preflight-lua.md",
+    "bytes": 30412,
+    "sha256": "c000b87461302747c806a77a9de920ac6bc59872bb78bdae23cc9a4b099a05c9"
+  },
+  "docs/server-acl.md": {
+    "url": "https://open2077.net/docs/server-acl.md",
+    "bytes": 11164,
+    "sha256": "9f34d488ebc54d0af756dab28aa67b2bb50712e69c50906ee43fddd7c00efa36"
+  },
+  "docs/callbacks.md": {
+    "url": "https://open2077.net/docs/callbacks.md",
+    "bytes": 16687,
+    "sha256": "5a8c9a1aee9d3031120943731410600170b4eefede5c34462e8136aba4a1a6b0"
+  },
+  "docs/state-bags.md": {
+    "url": "https://open2077.net/docs/state-bags.md",
+    "bytes": 20895,
+    "sha256": "acabd68342d22a85242944859e3295b8f47754d78f4b8dc96453dee30377d196"
+  },
+  "docs/readiness-gate.md": {
+    "url": "https://open2077.net/docs/readiness-gate.md",
+    "bytes": 7313,
+    "sha256": "9239b9d899b414b4b5337971e78366082198660b2ba464537b355acbea777fdb"
+  },
+  "docs/client-kvp.md": {
+    "url": "https://open2077.net/docs/client-kvp.md",
+    "bytes": 3733,
+    "sha256": "d424a5444af1c114d7e993b708169284f1012dd68f6277db941f75093c506ccc"
+  },
+  "docs/prediction.md": {
+    "url": "https://open2077.net/docs/prediction.md",
+    "bytes": 19938,
+    "sha256": "9dbb49f7d4b30be67841166126c196f16dc2befcee3e9e7dc4c4a8ccaee32896"
+  },
+  "docs/writing-a-gamemode.md": {
+    "url": "https://open2077.net/docs/writing-a-gamemode.md",
+    "bytes": 22100,
+    "sha256": "a8de2ab962875d085e06d9da78dfc05a6dfd7e0aab12d74a0425b1126dbb522f"
+  },
+  "docs/gamemode-kernel.md": {
+    "url": "https://open2077.net/docs/gamemode-kernel.md",
+    "bytes": 5474,
+    "sha256": "a9ee5d712c1c57e3c6f6bc839e35b57732533be7bc30b4e034cc3e3d62ef8e31"
+  },
+  "docs/tunables.md": {
+    "url": "https://open2077.net/docs/tunables.md",
+    "bytes": 6447,
+    "sha256": "d6501f6febb55d7280055851b044d05f11d9f30bad17d502f9da0be09e6e5df5"
+  },
+  "docs/deathmatch.md": {
+    "url": "https://open2077.net/docs/deathmatch.md",
+    "bytes": 23363,
+    "sha256": "729e9b5a23e417f40027dc6ad0421da42c5ba257af29070ac237ee69b307f596"
+  },
+  "docs/cordon.md": {
+    "url": "https://open2077.net/docs/cordon.md",
+    "bytes": 16033,
+    "sha256": "a6da1b1158cc08b7999b8ec11ca97c7bc1edc821fb2d95a5e3abb868bc3a3b7e"
+  },
+  "docs/chimera.md": {
+    "url": "https://open2077.net/docs/chimera.md",
+    "bytes": 19441,
+    "sha256": "c875b70487b2b597a7a0ef6ea807261147afba9f50fc04abcdbd7ed3b27df3cb"
+  },
+  "docs/client-players.md": {
+    "url": "https://open2077.net/docs/client-players.md",
+    "bytes": 9094,
+    "sha256": "8a89a10870f31500b87acdf7fedc623bf463f03b961ec2688d46fb3a9a16b513"
+  },
+  "docs/player-utilities.md": {
+    "url": "https://open2077.net/docs/player-utilities.md",
+    "bytes": 7037,
+    "sha256": "ce417cb7e392ed6e00db537533a1b3e3ec438ec543a1ca47c9668b2a9418bcb1"
+  },
+  "docs/local-puppet-visibility.md": {
+    "url": "https://open2077.net/docs/local-puppet-visibility.md",
+    "bytes": 3780,
+    "sha256": "d721c5b2adf88e7bf763bcac7ac4a221c5a15261d8f78d52525c24e196bdf748"
+  },
+  "docs/player-stats.md": {
+    "url": "https://open2077.net/docs/player-stats.md",
+    "bytes": 11193,
+    "sha256": "f5f956e76e84ae3e293a739332a7dec94f383b3dba16e74bfbbfb37776e5095b"
+  },
+  "docs/player-freeze.md": {
+    "url": "https://open2077.net/docs/player-freeze.md",
+    "bytes": 10814,
+    "sha256": "9152c6b24892350ba7efa2be3d6c4a633ba55425aa79df373322706fa28e726c"
+  },
+  "docs/active-ragdoll.md": {
+    "url": "https://open2077.net/docs/active-ragdoll.md",
+    "bytes": 24330,
+    "sha256": "389e79df0ea2c767ce08c63e6ac15a96e2431dcdf2040ad3e36ca5e26071dba3"
+  },
+  "docs/travel.md": {
+    "url": "https://open2077.net/docs/travel.md",
+    "bytes": 8043,
+    "sha256": "071949364579ef4b11561522b3f1a9f90d61c113a12e260fbcc34a41cef1da5b"
+  },
+  "docs/npcs.md": {
+    "url": "https://open2077.net/docs/npcs.md",
+    "bytes": 53308,
+    "sha256": "4e7a886ec89dd4b1e5e28598957e2e22cc171285064a65c5d316b9c52c7713e0"
+  },
+  "docs/character-previews.md": {
+    "url": "https://open2077.net/docs/character-previews.md",
+    "bytes": 8720,
+    "sha256": "4a40e0d3e6ed924abb138e284818c1faa8d0adf5107f3f0b9429c6ae3aea92cf"
+  },
+  "docs/npc-behavior.md": {
+    "url": "https://open2077.net/docs/npc-behavior.md",
+    "bytes": 16101,
+    "sha256": "66169fb7a7663bada24a3248145d5b72c900214ccac27fe36eb453da257960df"
+  },
+  "docs/population.md": {
+    "url": "https://open2077.net/docs/population.md",
+    "bytes": 13492,
+    "sha256": "87b57fd82dc603c85770c2ffe3af7a403e41f8d888aaa8b38bc75a3c36c3c09f"
+  },
+  "docs/npc-catalogue.md": {
+    "url": "https://open2077.net/docs/npc-catalogue.md",
+    "bytes": 2642,
+    "sha256": "4e85efb674e0606c609e5344b749511cab95fecc79e1efaec056820812a6cb7e"
+  },
+  "docs/player-models.md": {
+    "url": "https://open2077.net/docs/player-models.md",
+    "bytes": 8638,
+    "sha256": "9a173405960c966ae51f462fff07eaf346a4b64827c3a8ea2b40bc5f74789d75"
+  },
+  "docs/player-model-catalogue.md": {
+    "url": "https://open2077.net/docs/player-model-catalogue.md",
+    "bytes": 3857,
+    "sha256": "741f63d8bebb3e196f0c7ed2fdb41bbbd7a8c7b9f77521f99211c6a833763a9f"
+  },
+  "docs/custom-clothing.md": {
+    "url": "https://open2077.net/docs/custom-clothing.md",
+    "bytes": 12169,
+    "sha256": "7397533c6ea9c7559fe78e10038ed98f2e6fcc103ef0dc1f1d8644f981998325"
+  },
+  "docs/layered-outfits.md": {
+    "url": "https://open2077.net/docs/layered-outfits.md",
+    "bytes": 9905,
+    "sha256": "564083fbd3285fabb2265921b9ed7ad67ed314f67e3f0ae95091d614e86c5667"
+  },
+  "docs/runtime-body.md": {
+    "url": "https://open2077.net/docs/runtime-body.md",
+    "bytes": 7268,
+    "sha256": "0ee01a8fd2b29a7ddf40ed542ff085be182f84ab29ac625d0d253c1ce7920ee3"
+  },
+  "docs/character-creator.md": {
+    "url": "https://open2077.net/docs/character-creator.md",
+    "bytes": 12088,
+    "sha256": "4b19a49f52802732dcadec6fc20f10999da615be22dc2d7e4056610e098e9b6b"
+  },
+  "docs/runtime-character-creation.md": {
+    "url": "https://open2077.net/docs/runtime-character-creation.md",
+    "bytes": 6147,
+    "sha256": "469fc56c181c9120a02a42e8c7d8fedf540d6908afe6dc5a92b46adf0642faeb"
+  },
+  "docs/rp-animations.md": {
+    "url": "https://open2077.net/docs/rp-animations.md",
+    "bytes": 40885,
+    "sha256": "1a68454ad0c51859b4b9fb669387872e901e6f2f8a17a569f39c141a638ac47b"
+  },
+  "docs/custom-locomotion.md": {
+    "url": "https://open2077.net/docs/custom-locomotion.md",
+    "bytes": 20022,
+    "sha256": "adb96ea94fa289a079c9bdd45f6c75f5aa16e222a76e5a7907387b2fbb7fa678"
+  },
+  "docs/rp-animation-catalogue.md": {
+    "url": "https://open2077.net/docs/rp-animation-catalogue.md",
+    "bytes": 52502,
+    "sha256": "3cbed58727a2c07172055adb44e1e6ff98470d957d9789c9c1469ff51f6daa2a"
+  },
+  "docs/player-interactions.md": {
+    "url": "https://open2077.net/docs/player-interactions.md",
+    "bytes": 19365,
+    "sha256": "9f320c04078aa314cc9edfc36e6e1aab8dde5c4e9ed28307d7963f7485ed5134"
+  },
+  "docs/attachments.md": {
+    "url": "https://open2077.net/docs/attachments.md",
+    "bytes": 9186,
+    "sha256": "a39c6d755f6f308d7bc6ed29720a77d8472f4538bf9b6f7b3677810b7519dff8"
+  },
+  "docs/animated-actions.md": {
+    "url": "https://open2077.net/docs/animated-actions.md",
+    "bytes": 9910,
+    "sha256": "37d45ed7ef2c615adcda46591fe6753060abc621e7370688963023ebe095825b"
+  },
+  "docs/rp-kit.md": {
+    "url": "https://open2077.net/docs/rp-kit.md",
+    "bytes": 9950,
+    "sha256": "9a778ead9ad8ecc1addca4ead8c28cbade182eaf676d93e98bee19e1e793b6ac"
+  },
+  "docs/holocall-eyes.md": {
+    "url": "https://open2077.net/docs/holocall-eyes.md",
+    "bytes": 5241,
+    "sha256": "ce1da7e6d395bb5962d71b19db0451a4468c86e9f7bdeacaacd86f9d5c0585a2"
+  },
+  "docs/weapons-api.md": {
+    "url": "https://open2077.net/docs/weapons-api.md",
+    "bytes": 33096,
+    "sha256": "d2d5938a80c0a809c5b26e4c235d3f1fcfa2ca5a53888f878f7f84231f3905d2"
+  },
+  "docs/dual-wielding.md": {
+    "url": "https://open2077.net/docs/dual-wielding.md",
+    "bytes": 9408,
+    "sha256": "38eac3ab9d10043f848c0af85b0147f347e40a5a2473134db14cab40622b25fb"
+  },
+  "docs/consumables-api.md": {
+    "url": "https://open2077.net/docs/consumables-api.md",
+    "bytes": 9512,
+    "sha256": "fd35e79da497c25534f0f088574e41521800445fde056cd24155971e231d9b4b"
+  },
+  "docs/weapon-customization.md": {
+    "url": "https://open2077.net/docs/weapon-customization.md",
+    "bytes": 20893,
+    "sha256": "20576cef4266b4b066ae415ba8664aedf9de2f43c26e50c496931d7862fc36b3"
+  },
+  "docs/loot.md": {
+    "url": "https://open2077.net/docs/loot.md",
+    "bytes": 9399,
+    "sha256": "4ee579fd5f838322056b5ea006377a15569c957138d106393beb7af9a8d3b090"
+  },
+  "docs/cyberware.md": {
+    "url": "https://open2077.net/docs/cyberware.md",
+    "bytes": 15945,
+    "sha256": "b9db630ed9b63e45dd3aa3ec466b096367dacd5da1c07b78af2fb6b9d39baa01"
+  },
+  "docs/cyberware-customization.md": {
+    "url": "https://open2077.net/docs/cyberware-customization.md",
+    "bytes": 9470,
+    "sha256": "e32e5b01d43d5b463e921934ebf9c47e60cc617521acb0ba99d260f9ca4246a7"
+  },
+  "docs/gorilla-arms.md": {
+    "url": "https://open2077.net/docs/gorilla-arms.md",
+    "bytes": 10334,
+    "sha256": "a8c106c43e241384a10fa36b8152064237a5862816500112ab79c8edecf9a461"
+  },
+  "docs/dash.md": {
+    "url": "https://open2077.net/docs/dash.md",
+    "bytes": 8575,
+    "sha256": "4570a6de2debc36c9e8447fc33e2fef3dc9ddd367455bf200983d6e21b4ef1af"
+  },
+  "docs/ground-slam.md": {
+    "url": "https://open2077.net/docs/ground-slam.md",
+    "bytes": 11182,
+    "sha256": "d0f22244ff6bc61b0d6163ff1005bc156aaef26619978f8f731e638c48a0afd4"
+  },
+  "docs/reflex-overdrive.md": {
+    "url": "https://open2077.net/docs/reflex-overdrive.md",
+    "bytes": 15339,
+    "sha256": "70ad1dc5f084eed072d9746817cd12ddcb45503aec0c401a0866500df76ab495"
+  },
+  "docs/hacking.md": {
+    "url": "https://open2077.net/docs/hacking.md",
+    "bytes": 17344,
+    "sha256": "8528e1b77b0e990a0e09910538a4a2b039f7be555b3dd19db73094124cf1a311"
+  },
+  "docs/ability-activation-leases.md": {
+    "url": "https://open2077.net/docs/ability-activation-leases.md",
+    "bytes": 2453,
+    "sha256": "de4d2ef0441595d3c688679fbabdfc7401726ce49d9de258c48f716887cbf3e3"
+  },
+  "docs/vehicles.md": {
+    "url": "https://open2077.net/docs/vehicles.md",
+    "bytes": 120141,
+    "sha256": "cbdc69f5aed10397ccf88b9111da4e9e1aa0e20cc2be8fac97526e4d94c26f35"
+  },
+  "docs/vehicle-sirens.md": {
+    "url": "https://open2077.net/docs/vehicle-sirens.md",
+    "bytes": 3744,
+    "sha256": "e5d3f486704a31bdab08757732bd504b04d3a1d278a254aee5f577bb6b0c799b"
+  },
+  "docs/vehicle-seat-switching.md": {
+    "url": "https://open2077.net/docs/vehicle-seat-switching.md",
+    "bytes": 14809,
+    "sha256": "b98e5517638e27c27b0b68f696853647458ef5c9fe3fe61607f4a7d6587f3551"
+  },
+  "docs/vehicle-ai.md": {
+    "url": "https://open2077.net/docs/vehicle-ai.md",
+    "bytes": 5849,
+    "sha256": "f953cca9ee1884b1ef9ea65add58e48dbce46fd275e68e4db38a40dc7b186ac7"
+  },
+  "docs/vehicle-weapons.md": {
+    "url": "https://open2077.net/docs/vehicle-weapons.md",
+    "bytes": 18765,
+    "sha256": "af0025b72b2a2dd4800eb5300a05df36713df50a9a9800c013becd187a5b6796"
+  },
+  "docs/drive-by.md": {
+    "url": "https://open2077.net/docs/drive-by.md",
+    "bytes": 13189,
+    "sha256": "f7620bca84ea9c1e284b62289ce9481079a68a48859be1f35b4f1816ca36a8ef"
+  },
+  "docs/armed-vehicles.md": {
+    "url": "https://open2077.net/docs/armed-vehicles.md",
+    "bytes": 27171,
+    "sha256": "d0d2380f5932b26c50088800969b05fa344d53f5896cc8c5b2072bdbd792f147"
+  },
+  "docs/vehicle-customization.md": {
+    "url": "https://open2077.net/docs/vehicle-customization.md",
+    "bytes": 7549,
+    "sha256": "fb6e229bb85f8418ac3aebc1e4a8c10296a0dd2c1a537568a8849d242e6ccc75"
+  },
+  "docs/vehicle-customization-natives.md": {
+    "url": "https://open2077.net/docs/vehicle-customization-natives.md",
+    "bytes": 27409,
+    "sha256": "406bcf1522add9c686174b25b026dbc68b02fb559ed5665b561ff8383c3322b4"
+  },
+  "docs/vehicle-paint.md": {
+    "url": "https://open2077.net/docs/vehicle-paint.md",
+    "bytes": 6223,
+    "sha256": "030361be0d4b0d82ed791335bde8afe529b339250656ceebbf856bf8eb2554c4"
+  },
+  "docs/vehicle-customization-packs.md": {
+    "url": "https://open2077.net/docs/vehicle-customization-packs.md",
+    "bytes": 15225,
+    "sha256": "a71a0a21733d5eab3c0d7bb9b6bb7931b336cd5fbee4a09a5b29f295eb91534e"
+  },
+  "docs/vehicle-customization-models.md": {
+    "url": "https://open2077.net/docs/vehicle-customization-models.md",
+    "bytes": 6573,
+    "sha256": "66dbab23960537a2e256c272e975b19b90c00b31baf5d7242a7f82a74bdcfee9"
+  },
+  "docs/vehicle-customization-persistence.md": {
+    "url": "https://open2077.net/docs/vehicle-customization-persistence.md",
+    "bytes": 8292,
+    "sha256": "f506511575b483598c0e5c7f2d599065de638ec1da907c8d1b6d2d3137d88033"
+  },
+  "docs/vehicle-customization-fivem.md": {
+    "url": "https://open2077.net/docs/vehicle-customization-fivem.md",
+    "bytes": 8447,
+    "sha256": "ec79760c3d4c6929e12dd603d8ddf9c46288ebfaaa3c9b1ecddf4741964c9ca0"
+  },
+  "docs/vehicle-customization-examples.md": {
+    "url": "https://open2077.net/docs/vehicle-customization-examples.md",
+    "bytes": 13983,
+    "sha256": "4eb1ecfa49f6c38e762fe94db983d757828831f8814633f6702621375f1ef7d4"
+  },
+  "docs/weather.md": {
+    "url": "https://open2077.net/docs/weather.md",
+    "bytes": 15029,
+    "sha256": "a4d87c53f5543ad1d3f839dddab7a8e5adef395f6fffbfee6c62bcffeb9863c6"
+  },
+  "docs/world-time.md": {
+    "url": "https://open2077.net/docs/world-time.md",
+    "bytes": 9400,
+    "sha256": "947c256cbc94898912fb13614943ac4e4d134eaf4e2dd4d6fdeb4d586c3a51f2"
+  },
+  "docs/doors.md": {
+    "url": "https://open2077.net/docs/doors.md",
+    "bytes": 24184,
+    "sha256": "4384c103921cfb7c9711a6f11acd796cef5e04c995530e4356cc9e2ba9180120"
+  },
+  "docs/elevators.md": {
+    "url": "https://open2077.net/docs/elevators.md",
+    "bytes": 10045,
+    "sha256": "6bb98017975e2e1959113259d1d08b03942b55dc7a2cf43d1519949d4e008dcc"
+  },
+  "docs/props.md": {
+    "url": "https://open2077.net/docs/props.md",
+    "bytes": 44397,
+    "sha256": "cfa5ffa9dd083d108f664bf28b395ee2a1ea07d5b89ffc1e3718c23c64a88906"
+  },
+  "docs/gizmos.md": {
+    "url": "https://open2077.net/docs/gizmos.md",
+    "bytes": 21319,
+    "sha256": "c0ca0b6856fe38d6839e0a197a44c45a1524dcfa07efa9ebd29eab4c055dd318"
+  },
+  "docs/props-and-effects.md": {
+    "url": "https://open2077.net/docs/props-and-effects.md",
+    "bytes": 37271,
+    "sha256": "caafed6d9f1fe7c1cc7dad4b35fbe11e1c4a6e41074ce622d801748a54b9cac9"
+  },
+  "docs/effects.md": {
+    "url": "https://open2077.net/docs/effects.md",
+    "bytes": 56097,
+    "sha256": "9e310029c8f07078392496197b411a54f0dc4c5eafbf3137c625ae56dce5b0e5"
+  },
+  "docs/sky-advertising.md": {
+    "url": "https://open2077.net/docs/sky-advertising.md",
+    "bytes": 4755,
+    "sha256": "faf59bb290bc45f4b71a50ce8481e75d4823ba514786819da224eb73648ab983"
+  },
+  "docs/native-map.md": {
+    "url": "https://open2077.net/docs/native-map.md",
+    "bytes": 18582,
+    "sha256": "dd83c7702a6aff731501c75d9910241bfa97ae2889dc9bc0a03161435f14b1c7"
+  },
+  "docs/map-providers.md": {
+    "url": "https://open2077.net/docs/map-providers.md",
+    "bytes": 7017,
+    "sha256": "a20ccb75da153201fed919d0f041d1d1f5345875fe323c088972ce36af21296c"
+  },
+  "docs/map3d.md": {
+    "url": "https://open2077.net/docs/map3d.md",
+    "bytes": 22007,
+    "sha256": "1ce364118626ff61223cfee94ceabe5315aa1157b562292dd4045721382b03bb"
+  },
+  "docs/blips.md": {
+    "url": "https://open2077.net/docs/blips.md",
+    "bytes": 19605,
+    "sha256": "bc20f1204fcea08c188bbf39b3cedb9e26dea23139bb3867bdc4429a86456edc"
+  },
+  "docs/custom-blip-icons.md": {
+    "url": "https://open2077.net/docs/custom-blip-icons.md",
+    "bytes": 10505,
+    "sha256": "d954a2a0892dbc2f7c1df4488ce7c09eb86ddb76d531cafd129bcc8a3010da21"
+  },
+  "docs/markers.md": {
+    "url": "https://open2077.net/docs/markers.md",
+    "bytes": 10534,
+    "sha256": "e94cb52b0777eb9533791a92d2b922a1fdcf51ac75263c76993583649b231efd"
+  },
+  "docs/world-drawing.md": {
+    "url": "https://open2077.net/docs/world-drawing.md",
+    "bytes": 44555,
+    "sha256": "c80052e35becab60764e05cae8ded01461e3549fdc6aacc2cca62e64f8e88460"
+  },
+  "docs/worldui.md": {
+    "url": "https://open2077.net/docs/worldui.md",
+    "bytes": 7117,
+    "sha256": "cef4a5837f9148cefb1d633a456fea3c2a20649e1b76b42a4e2d9512e7bf1fd8"
+  },
+  "docs/world-queries.md": {
+    "url": "https://open2077.net/docs/world-queries.md",
+    "bytes": 26630,
+    "sha256": "b759d53db62746ab9d52f9ad0862b16c9024381ac6f189b6f389b705bb320271"
+  },
+  "docs/zones.md": {
+    "url": "https://open2077.net/docs/zones.md",
+    "bytes": 22486,
+    "sha256": "d9ebd138bccd14b615443ed4143d2208a4d419d5f964ed4842f6437d9579658a"
+  },
+  "docs/polyzone.md": {
+    "url": "https://open2077.net/docs/polyzone.md",
+    "bytes": 13016,
+    "sha256": "4d5a4ee3e0340683a85fd6aff2f3af8a82c1ee424d58fd40f48e4d3328fd0d10"
+  },
+  "docs/screen-picking.md": {
+    "url": "https://open2077.net/docs/screen-picking.md",
+    "bytes": 8270,
+    "sha256": "e480b746fe1a3d601fbd0dd25bdd46c5294409335e2e1db7323be7280b46951b"
+  },
+  "docs/context-menu.md": {
+    "url": "https://open2077.net/docs/context-menu.md",
+    "bytes": 20688,
+    "sha256": "8d09931c5a267f9e2ecea1189eb7a66db120de497f0927c0980f9767e5322410"
+  },
+  "docs/interactions.md": {
+    "url": "https://open2077.net/docs/interactions.md",
+    "bytes": 34793,
+    "sha256": "74c40fea11414f63a4afae5f3f5c66463add5d1ea7e17cf75695a5b9b5aeb421"
+  },
+  "docs/device-interactions.md": {
+    "url": "https://open2077.net/docs/device-interactions.md",
+    "bytes": 7652,
+    "sha256": "9605a53ee557d0f2407521433510d1d86a69c749fb949445f4fd985f8b148639"
+  },
+  "docs/quickhack.md": {
+    "url": "https://open2077.net/docs/quickhack.md",
+    "bytes": 13075,
+    "sha256": "1ca35f7023490023d3e1c28b702d9ba0a2fb8792abeac7599a1a779584ba1afa"
+  },
+  "docs/quickhack-examples.md": {
+    "url": "https://open2077.net/docs/quickhack-examples.md",
+    "bytes": 14076,
+    "sha256": "6545565468394df687535f5874a25058f53947fc20a70095f815e043e08eb8db"
+  },
+  "docs/world-interaction.md": {
+    "url": "https://open2077.net/docs/world-interaction.md",
+    "bytes": 11429,
+    "sha256": "eb9bf6ffa94b5404afbecb681d1b4064206df06e83a974256bb7eaef22226852"
+  },
+  "docs/build-a-job.md": {
+    "url": "https://open2077.net/docs/build-a-job.md",
+    "bytes": 29227,
+    "sha256": "ce70f1ee2bc4c3781225beab95b8a6c109b3048990daa53b457e1a8981631160"
+  },
+  "docs/actions.md": {
+    "url": "https://open2077.net/docs/actions.md",
+    "bytes": 36618,
+    "sha256": "5c48a6a8e65f36b447db014586d719d68386137ab5f15d74da2ea29eb1b1c106"
+  },
+  "docs/transactions.md": {
+    "url": "https://open2077.net/docs/transactions.md",
+    "bytes": 26597,
+    "sha256": "8d818a9d64b064610f01b95bc6d15c5d756c6dfbba9e4e4141060a620c8dcf0d"
+  },
+  "docs/furniture.md": {
+    "url": "https://open2077.net/docs/furniture.md",
+    "bytes": 12384,
+    "sha256": "40057a1d64b0310d526c3ff73ecad2b448e8bcd890b100d0ad3b0d480382fa76"
+  },
+  "docs/rp-jobs.md": {
+    "url": "https://open2077.net/docs/rp-jobs.md",
+    "bytes": 12790,
+    "sha256": "f6aa2cb7cb8d9e115759d00998e3ff0e75f4450777cd05a166e530bec67ab04c"
+  },
+  "docs/rp-job-ripperdoc.md": {
+    "url": "https://open2077.net/docs/rp-job-ripperdoc.md",
+    "bytes": 22642,
+    "sha256": "5965303237d9961d7c0aa4df2e386d79b6f04a7810a3590a1f42f3b9e26c6e18"
+  },
+  "docs/rp-job-chooh2.md": {
+    "url": "https://open2077.net/docs/rp-job-chooh2.md",
+    "bytes": 27568,
+    "sha256": "94ea418c4f20e62ab0f69ce849b3bbc6bcabc724f9359df80752ec7fde9af276"
+  },
+  "docs/rp-job-techie.md": {
+    "url": "https://open2077.net/docs/rp-job-techie.md",
+    "bytes": 30079,
+    "sha256": "cbbabe858eef24e3ac26ce17e7585e770bbbbb030a9e3e52eea1e1ff0bba537b"
+  },
+  "docs/rp-job-netrunner.md": {
+    "url": "https://open2077.net/docs/rp-job-netrunner.md",
+    "bytes": 27964,
+    "sha256": "bf06897ed258092489c5f9c9b0304e7ae17a722e0be4e71b1000e0838a27f90b"
+  },
+  "docs/rp-job-fixer.md": {
+    "url": "https://open2077.net/docs/rp-job-fixer.md",
+    "bytes": 34023,
+    "sha256": "78799a60eadcaf11ac719ee8996db6004bb8e20aac3f0cce4e3dda229e6e3a7c"
+  },
+  "docs/rp-job-trauma-team.md": {
+    "url": "https://open2077.net/docs/rp-job-trauma-team.md",
+    "bytes": 29386,
+    "sha256": "85569c9099590d714d63a744e0cbe53539658e88ceeeadd94e013630f7afdfef"
+  },
+  "docs/rp-job-nomad.md": {
+    "url": "https://open2077.net/docs/rp-job-nomad.md",
+    "bytes": 28197,
+    "sha256": "ecfe9a1dd7e5ad55db381a436cb0d225c8f753affb4bfc919e8189523ecc7f58"
+  },
+  "docs/pause-menu.md": {
+    "url": "https://open2077.net/docs/pause-menu.md",
+    "bytes": 7805,
+    "sha256": "12d04bdcc05912a37929873aa596e1f39765515430aa14017510900d77afa81f"
+  },
+  "docs/loading-screens.md": {
+    "url": "https://open2077.net/docs/loading-screens.md",
+    "bytes": 12037,
+    "sha256": "1223666022d3d50e314d408e98b23e9f4c1a0d84608cf1c994b9d6e8352587c0"
+  },
+  "docs/ui-kit.md": {
+    "url": "https://open2077.net/docs/ui-kit.md",
+    "bytes": 46719,
+    "sha256": "c764bea210eef4c718a0e796e27301d645a7aca7d715dabcf5b89b46403ba004"
+  },
+  "docs/webui-assets.md": {
+    "url": "https://open2077.net/docs/webui-assets.md",
+    "bytes": 15038,
+    "sha256": "5193dc0769dfe91ca9ff388d9fce06a66924f8cfa72861986590be7e0034c8da"
+  },
+  "docs/webui-budget.md": {
+    "url": "https://open2077.net/docs/webui-budget.md",
+    "bytes": 8294,
+    "sha256": "27cb7c44aacdab8a4a6aa05eeeed28f8328ee462bb0fb7b26339881224d2a3a1"
+  },
+  "docs/notifications.md": {
+    "url": "https://open2077.net/docs/notifications.md",
+    "bytes": 6946,
+    "sha256": "6ddde49690d3361dae7894341179bce7d2e5a751c215c129025ef6da74759805"
+  },
+  "docs/hud-visibility.md": {
+    "url": "https://open2077.net/docs/hud-visibility.md",
+    "bytes": 12835,
+    "sha256": "a13f83a6c43c8069f82a39d625a9a35a5b434fffc1095fff84114733c5bb7a20"
+  },
+  "docs/world-screens.md": {
+    "url": "https://open2077.net/docs/world-screens.md",
+    "bytes": 7920,
+    "sha256": "c296a98b0eca952d6e865bee14634546a6285fbc454c35c3e89f9af1e1b1622b"
+  },
+  "docs/native-ui.md": {
+    "url": "https://open2077.net/docs/native-ui.md",
+    "bytes": 8587,
+    "sha256": "22a74d522671353ba3c1fb9a35d398a77fb5dd77f75c7fa1eed9612665704865"
+  },
+  "docs/native-ui-documents.md": {
+    "url": "https://open2077.net/docs/native-ui-documents.md",
+    "bytes": 13087,
+    "sha256": "bfe836071bff8ae670f94b09a308fbf71e4cd5239b680e339debb592c7a27d9e"
+  },
+  "docs/native-ui-rml.md": {
+    "url": "https://open2077.net/docs/native-ui-rml.md",
+    "bytes": 5354,
+    "sha256": "edad94b160e940dfa8b22d599a22786bfa67a1c4363185fea414d93892ac963f"
+  },
+  "docs/native-ui-motion.md": {
+    "url": "https://open2077.net/docs/native-ui-motion.md",
+    "bytes": 6437,
+    "sha256": "ad3dfa923bc89e53e5f6148036a9642e7ef3dff88ae4c5dc6269872aaa596a31"
+  },
+  "docs/native-ui-effects.md": {
+    "url": "https://open2077.net/docs/native-ui-effects.md",
+    "bytes": 8049,
+    "sha256": "d8400ef5e3b4ff274eee096c4c75244a5d5875a31ba2bcafa62c515b79aa480b"
+  },
+  "docs/native-ui-3d.md": {
+    "url": "https://open2077.net/docs/native-ui-3d.md",
+    "bytes": 5720,
+    "sha256": "b1b7b3aaf2c19cc31886185508887c031c320a544c29e261c25b0effe02dc165"
+  },
+  "docs/native-ui-scenes.md": {
+    "url": "https://open2077.net/docs/native-ui-scenes.md",
+    "bytes": 10859,
+    "sha256": "01160c45b19f0de5168bd61ba8b26136d60afa47f87594a5d7d37528ec5c250c"
+  },
+  "docs/native-ui-recipes.md": {
+    "url": "https://open2077.net/docs/native-ui-recipes.md",
+    "bytes": 9036,
+    "sha256": "db4295507785074fdf5b9aa210530c1ca54e5ee7405722cb58b13b1f858d5297"
+  },
+  "docs/preflight-screens.md": {
+    "url": "https://open2077.net/docs/preflight-screens.md",
+    "bytes": 33707,
+    "sha256": "46af247e978f79dd22c14523f731da75b5c90bd256a4eca62d43f1de8651274c"
+  },
+  "docs/webui-input.md": {
+    "url": "https://open2077.net/docs/webui-input.md",
+    "bytes": 4606,
+    "sha256": "7e055846117fee8efd0d6b366b46a695dd490fd43c4f245d61af08b953283754"
+  },
+  "docs/webui-cursor.md": {
+    "url": "https://open2077.net/docs/webui-cursor.md",
+    "bytes": 8713,
+    "sha256": "c753db746ec9bce2b46a08a25314406d1985a01b1b0a1b6dcb93f3948c434362"
+  },
+  "docs/keybindings.md": {
+    "url": "https://open2077.net/docs/keybindings.md",
+    "bytes": 14389,
+    "sha256": "3691e57d86f74a2dc8bf37870e2fc66428660092574d4ab22041b4e9c287cbbe"
+  },
+  "docs/input-blocking.md": {
+    "url": "https://open2077.net/docs/input-blocking.md",
+    "bytes": 8500,
+    "sha256": "96fa8d30ca9ad9d9399a4eb1f6b17706841a7d8193b39f5c18abedbdbd3c2fb6"
+  },
+  "docs/clipboard.md": {
+    "url": "https://open2077.net/docs/clipboard.md",
+    "bytes": 3594,
+    "sha256": "8110f1d3e43d2c7853b1fce92252a8254ab988796c489647db3c6251e91c1afd"
+  },
+  "docs/perspective.md": {
+    "url": "https://open2077.net/docs/perspective.md",
+    "bytes": 16680,
+    "sha256": "acc025e6c5372ce63873fc970a6e9d857146b291b576cb252286e010d05d5c33"
+  },
+  "docs/cameras.md": {
+    "url": "https://open2077.net/docs/cameras.md",
+    "bytes": 24398,
+    "sha256": "d01925728980b08d892d0b2d99f9fb97874aa4e6af173eac05e3815ce021ed11"
+  },
+  "docs/third-person-camera.md": {
+    "url": "https://open2077.net/docs/third-person-camera.md",
+    "bytes": 10246,
+    "sha256": "d6fe8662ce606b69130ca45842e358844394ebe909cab82da5340c27d0bd1bcc"
+  },
+  "docs/remote-camera.md": {
+    "url": "https://open2077.net/docs/remote-camera.md",
+    "bytes": 17844,
+    "sha256": "8840c39a439bb7f71fcfd0fdc6963fa95c5ef8c1491c166122d78c0dc0df6baa"
+  },
+  "docs/screen-transitions.md": {
+    "url": "https://open2077.net/docs/screen-transitions.md",
+    "bytes": 13672,
+    "sha256": "2c18d592224318950f634f0a8cdf2d3996329d57120bfdd58a3d6d271c11feab"
+  },
+  "docs/braindance.md": {
+    "url": "https://open2077.net/docs/braindance.md",
+    "bytes": 17068,
+    "sha256": "31a4614811a579fbd511cd7b3d00e9e95b1b00b91b33b0b7ee10ee89e1a4a361"
+  },
+  "docs/photo-mode.md": {
+    "url": "https://open2077.net/docs/photo-mode.md",
+    "bytes": 2770,
+    "sha256": "c721e79171f51803be1a689d56cc8dce0789dbe39146e45c69612d9ecf967a87"
+  },
+  "docs/screenshots.md": {
+    "url": "https://open2077.net/docs/screenshots.md",
+    "bytes": 18180,
+    "sha256": "ed2b129ae70da02f982a12cab9ddf7bff3ff9c8e2cb30e6cc48b97b1f6ffcadc"
+  },
+  "docs/package-audio.md": {
+    "url": "https://open2077.net/docs/package-audio.md",
+    "bytes": 6460,
+    "sha256": "f6c37a0c263b60770a28513ec00acd7a021cd84ef434b04a2345f3e0898f68f7"
+  },
+  "docs/sound.md": {
+    "url": "https://open2077.net/docs/sound.md",
+    "bytes": 15433,
+    "sha256": "ea9d9d1eda3966a11bffe6645f2abaaa04f3e5865a69ce13dc6017d7dac23acb"
+  },
+  "docs/chat.md": {
+    "url": "https://open2077.net/docs/chat.md",
+    "bytes": 6873,
+    "sha256": "de8f30361766241d65d83ddf616a2d1841108ab981e2aef6dd284fa20bdd1652"
+  },
+  "docs/voice.md": {
+    "url": "https://open2077.net/docs/voice.md",
+    "bytes": 9964,
+    "sha256": "10bd3033575cf321c2a9eb6e3400560b8220a5d26af7c9eaf10a5eb7602cc436"
+  },
+  "docs/voice-channels.md": {
+    "url": "https://open2077.net/docs/voice-channels.md",
+    "bytes": 7354,
+    "sha256": "a611292e710d5ad34675ab870bf5429330dc59c30855f8ddf7f1d27c192f95f3"
+  },
+  "docs/voice-graph.md": {
+    "url": "https://open2077.net/docs/voice-graph.md",
+    "bytes": 11688,
+    "sha256": "7546da03fdf46c3013cd9cdb48f71d61596f529ec4d8be6e9acda103dc640231"
+  },
+  "docs/voice-effects.md": {
+    "url": "https://open2077.net/docs/voice-effects.md",
+    "bytes": 11573,
+    "sha256": "a629e8316abf9d8f5805a7c693b9014557c2f1d1b5832d83cf136362c601c160"
+  },
+  "docs/voice-client.md": {
+    "url": "https://open2077.net/docs/voice-client.md",
+    "bytes": 9921,
+    "sha256": "02c79928dc3fbad416e1d8bd937a47ed441032d15e0c5f6dfbf143e0746229b7"
+  },
+  "docs/voice-recipes.md": {
+    "url": "https://open2077.net/docs/voice-recipes.md",
+    "bytes": 10011,
+    "sha256": "a20e90ffe04938eb606c9e75e44f7c877042cd2f077aab0b6533ed9eeaa6aed9"
+  },
+  "docs/voice-lipsync.md": {
+    "url": "https://open2077.net/docs/voice-lipsync.md",
+    "bytes": 5893,
+    "sha256": "996882b16e69141f69b160cf6944f317bab6af95fc39cb5ab194b9b544276dae"
+  },
+  "docs/guided-voice-setup.md": {
+    "url": "https://open2077.net/docs/guided-voice-setup.md",
+    "bytes": 13093,
+    "sha256": "5e93fdf98882e11a467b4b4a8871ba94112ac4fc9388afbf71c5f144e92d7030"
+  },
+  "docs/mods.md": {
+    "url": "https://open2077.net/docs/mods.md",
+    "bytes": 19367,
+    "sha256": "52dac65074b853489e7740e48a34c3e23d7df8fcc6a0ddda6fb6ff706dd86ca1"
+  },
+  "docs/server-mods.md": {
+    "url": "https://open2077.net/docs/server-mods.md",
+    "bytes": 25328,
+    "sha256": "98e71ab85d7a14fa874575b251e241fb5cd0606679e7cf50355140820ed18897"
+  },
+  "docs/data-reference.md": {
+    "url": "https://open2077.net/docs/data-reference.md",
+    "bytes": 9947,
+    "sha256": "026a1b971bded708f979c9d15fb11662c8a5466a65d7b72d0b9464ae838ad4d2"
+  },
+  "docs/data-catalogues.md": {
+    "url": "https://open2077.net/docs/data-catalogues.md",
+    "bytes": 7744,
+    "sha256": "9c563af76b1d3c7a9245bd23e55d8f9011f49a56b9a708348259a5e05ddd0a56"
+  },
+  "docs/api.md": {
+    "url": "https://open2077.net/docs/api.md",
+    "bytes": 2087112,
+    "sha256": "2105b431217b7f910f8b28eab81a62db0c41709073e4ddd1ddaa16e501a9d246"
+  },
+  "docs/server-api.md": {
+    "url": "https://open2077.net/docs/server-api.md",
+    "bytes": 223484,
+    "sha256": "124348843399e4021df4abe29202f69f1dc9bac5f1e835a268420b258b911049"
+  },
+  "docs/agents.md": {
+    "url": "https://open2077.net/docs/agents.md",
+    "bytes": 3948,
+    "sha256": "4356c99930cb48f8e9dbd4c78f79afaa1cc2acc592a23ac61f5013d9700caceb"
+  },
+  "docs/rtti.md": {
+    "url": "https://open2077.net/docs/rtti.md",
+    "bytes": 13853,
+    "sha256": "34ba34f2b524cd1e3fb6056274c78e2377f26312b9baf325413922d98b214afd"
+  },
+  "docs/rtti-testing.md": {
+    "url": "https://open2077.net/docs/rtti-testing.md",
+    "bytes": 12356,
+    "sha256": "205dfef474eab935fe59dceaf5c49fc4665f516dabe9608b2288e0fe5bc09d0b"
+  },
+  "docs/debug-runtime.md": {
+    "url": "https://open2077.net/docs/debug-runtime.md",
+    "bytes": 5241,
+    "sha256": "2f867d9794d406827d5e0725bb1329db43c05be3d33612a5045bff5c8a052242"
+  },
+  "docs/agent-testing.md": {
+    "url": "https://open2077.net/docs/agent-testing.md",
+    "bytes": 14171,
+    "sha256": "e51cb33eb040ae8e80fb422e3fbe821b214b524988a5248c7cb2662cbc0962bc"
+  },
+  "docs/api/server/globals.md": {
+    "url": "https://open2077.net/docs/api/server/globals.md",
+    "bytes": 251341,
+    "sha256": "f213396d786939e0a586a6d64179204fd1ae4c2f69fae88308ad1e3309bcb791"
+  },
+  "docs/api/server/unnamed.md": {
+    "url": "https://open2077.net/docs/api/server/unnamed.md",
+    "bytes": 1053,
+    "sha256": "c48a3aeb2fd4e63fb8df1129b18e4dbc0c9e6ae3eaea5cd51d3cab0b7ca6b041"
+  },
+  "docs/api/server/request.md": {
+    "url": "https://open2077.net/docs/api/server/request.md",
+    "bytes": 726,
+    "sha256": "8762abb2a17548f66f856c299135555ba4fc3a35e75a09b0b75049d4220da11f"
+  },
+  "docs/api/server/citizen.md": {
+    "url": "https://open2077.net/docs/api/server/citizen.md",
+    "bytes": 6627,
+    "sha256": "1d3c2c6e8d773f8adb424d946213c35db3179ede26b8930a7bdcd5c98d05d8b4"
+  },
+  "docs/api/server/db.md": {
+    "url": "https://open2077.net/docs/api/server/db.md",
+    "bytes": 9114,
+    "sha256": "ffcd9d644295a682ccf6f8ea4fb988f3c3e569a123cd8dcbd5aa604295a1d61b"
+  },
+  "docs/api/server/json.md": {
+    "url": "https://open2077.net/docs/api/server/json.md",
+    "bytes": 1612,
+    "sha256": "82a6441e7beccce44fe214173c1d11ce4538ae1cca704e66f50688f69cb86921"
+  },
+  "docs/api/server/resource-open77-doors.md": {
+    "url": "https://open2077.net/docs/api/server/resource-open77-doors.md",
+    "bytes": 26376,
+    "sha256": "e6d26e584dcacb27fd3ea5129bfc8f65f392580e215c239e0df3fbf4785218b0"
+  },
+  "docs/api/server/open77-abilities.md": {
+    "url": "https://open2077.net/docs/api/server/open77-abilities.md",
+    "bytes": 4455,
+    "sha256": "57b95158e623eda44904ccf3e65563439e72446c32b91974ed1fd5db4441c9ae"
+  },
+  "docs/api/server/open77-access.md": {
+    "url": "https://open2077.net/docs/api/server/open77-access.md",
+    "bytes": 19813,
+    "sha256": "9b0f6ca2840546af147ad193dfda8fe57e8748ddc638da3250dd8385e37341b8"
+  },
+  "docs/api/server/open77-acl.md": {
+    "url": "https://open2077.net/docs/api/server/open77-acl.md",
+    "bytes": 10451,
+    "sha256": "0adafa840e7f3ac2b664fd8a10e659516b9f3148a6487a3466e107241f491d1a"
+  },
+  "docs/api/server/open77-animations.md": {
+    "url": "https://open2077.net/docs/api/server/open77-animations.md",
+    "bytes": 22728,
+    "sha256": "cbe4365c6a2c2287ffcc6f34836c773679c6316e3cd10b7e551405e41b1a3e13"
+  },
+  "docs/api/server/open77-appearance.md": {
+    "url": "https://open2077.net/docs/api/server/open77-appearance.md",
+    "bytes": 6036,
+    "sha256": "c18b4b2338d6ef150dd3f9e032fbb78eb06dd784c049fe10eacd9ab9024082de"
+  },
+  "docs/api/server/open77-audio.md": {
+    "url": "https://open2077.net/docs/api/server/open77-audio.md",
+    "bytes": 11748,
+    "sha256": "b78f64c5ea5910b2ba8a9cdcb2f5097ac5f135365b03ef5f3a0d4726ed2c1035"
+  },
+  "docs/api/server/open77-callbacks.md": {
+    "url": "https://open2077.net/docs/api/server/open77-callbacks.md",
+    "bytes": 3454,
+    "sha256": "c9a0bcb68e2c1b81006f7e4ca8a359585ee5df3ab805617db6251b9b6ef6f4df"
+  },
+  "docs/api/server/open77-chat.md": {
+    "url": "https://open2077.net/docs/api/server/open77-chat.md",
+    "bytes": 8051,
+    "sha256": "9995ef4eeaa145f82d0d8f29c0a9f674d48906cefc636b6be8e017731fd7f98f"
+  },
+  "docs/api/server/open77-clothing.md": {
+    "url": "https://open2077.net/docs/api/server/open77-clothing.md",
+    "bytes": 4516,
+    "sha256": "f230a4bf0f828c3dcc248f96d7507fae83ef6490e3e917b5915c13cc5d51e6e8"
+  },
+  "docs/api/server/open77-combat.md": {
+    "url": "https://open2077.net/docs/api/server/open77-combat.md",
+    "bytes": 12006,
+    "sha256": "0fef162e8cdabee29bf529bdf2e6e67f7455192da64014d35e706d010f17972b"
+  },
+  "docs/api/server/open77-consumables.md": {
+    "url": "https://open2077.net/docs/api/server/open77-consumables.md",
+    "bytes": 13818,
+    "sha256": "19c1991b50936b25cd64560c54f64df0ee0fc392dde6e76eae6f2635b4e34212"
+  },
+  "docs/api/server/open77-convars.md": {
+    "url": "https://open2077.net/docs/api/server/open77-convars.md",
+    "bytes": 2508,
+    "sha256": "5858e233f25d71a23b6bd6e4ab9ace9348eef0091b46f58396a7ee7a63927f8c"
+  },
+  "docs/api/server/open77-cyberware.md": {
+    "url": "https://open2077.net/docs/api/server/open77-cyberware.md",
+    "bytes": 15832,
+    "sha256": "b715341c84e590470b43bbcc26f4b7a18e533ebe5374ca2827182730302800d3"
+  },
+  "docs/api/server/open77-dash.md": {
+    "url": "https://open2077.net/docs/api/server/open77-dash.md",
+    "bytes": 5904,
+    "sha256": "730c819b3215bd99672eff2a7ea85694ced812d01782c4451453b6da9e22ba2d"
+  },
+  "docs/api/server/open77-data.md": {
+    "url": "https://open2077.net/docs/api/server/open77-data.md",
+    "bytes": 7185,
+    "sha256": "877ba3031e3dc8ba215da26ad88bdd0ce97362dab5ce225010a1f736da6ad261"
+  },
+  "docs/api/server/open77-database.md": {
+    "url": "https://open2077.net/docs/api/server/open77-database.md",
+    "bytes": 16623,
+    "sha256": "5246fe4a3c745812331697929c05422f4ead09fc327835d5ee3bae1c64137e37"
+  },
+  "docs/api/server/open77-effects.md": {
+    "url": "https://open2077.net/docs/api/server/open77-effects.md",
+    "bytes": 22435,
+    "sha256": "c2e96b8d9f2e01434a260d6b7f9108703e0f063ee199e2320464e5359c650b40"
+  },
+  "docs/api/server/open77-elevators.md": {
+    "url": "https://open2077.net/docs/api/server/open77-elevators.md",
+    "bytes": 7506,
+    "sha256": "4833fdfde6d21f32689eca22379fe2ba243ffcaa495c4af968ba6ca0d3df27f3"
+  },
+  "docs/api/server/open77-environment.md": {
+    "url": "https://open2077.net/docs/api/server/open77-environment.md",
+    "bytes": 9573,
+    "sha256": "f46f7fa697f1098755aeca39dad47d225e20eb67644bc488045c8d4fa763ac03"
+  },
+  "docs/api/server/open77-events.md": {
+    "url": "https://open2077.net/docs/api/server/open77-events.md",
+    "bytes": 5181,
+    "sha256": "891b7651cc93cfebabf0aed8ad24a17939a4445578d972621319b90429b32626"
+  },
+  "docs/api/server/open77-eventverdict.md": {
+    "url": "https://open2077.net/docs/api/server/open77-eventverdict.md",
+    "bytes": 2983,
+    "sha256": "092e49115c97534ef463540dfc0ba222abf9df6decfd855a806fd931d150dfce"
+  },
+  "docs/api/server/open77-exports.md": {
+    "url": "https://open2077.net/docs/api/server/open77-exports.md",
+    "bytes": 3056,
+    "sha256": "c017ec56f5e382e4ad0018d786abb22842b7c8db81d5ed47db9a73bef294a79d"
+  },
+  "docs/api/server/open77-hacking.md": {
+    "url": "https://open2077.net/docs/api/server/open77-hacking.md",
+    "bytes": 11763,
+    "sha256": "4e038e21732cc1bd16dc8b31cbcf7072a67d14cbd4da345b44c0193c7f29b0af"
+  },
+  "docs/api/server/open77-helditems.md": {
+    "url": "https://open2077.net/docs/api/server/open77-helditems.md",
+    "bytes": 4514,
+    "sha256": "577307f89b7ecd4bbf1c585c75da1847e1607ed089e4c32dbfea29bf4d38e22b"
+  },
+  "docs/api/server/open77-http.md": {
+    "url": "https://open2077.net/docs/api/server/open77-http.md",
+    "bytes": 12305,
+    "sha256": "0156d1d77d4a618e2b4b819c17e79ecaafd8110fb1d6a915b9773c0fee36b8e5"
+  },
+  "docs/api/server/open77-interest.md": {
+    "url": "https://open2077.net/docs/api/server/open77-interest.md",
+    "bytes": 3681,
+    "sha256": "b0f8e5bce42c4b9102d542821f01924378b6ce854fcc23da821db3fcf14bed1b"
+  },
+  "docs/api/server/open77-io.md": {
+    "url": "https://open2077.net/docs/api/server/open77-io.md",
+    "bytes": 9319,
+    "sha256": "093901856b82bba28f61889ec63bd3d24930bce21f1525a1f56411ced0442b91"
+  },
+  "docs/api/server/open77-kvp.md": {
+    "url": "https://open2077.net/docs/api/server/open77-kvp.md",
+    "bytes": 11612,
+    "sha256": "97747097f622394eadbb386a02002ef5fb99db27e0aba6d77fcfdb2b4f181791"
+  },
+  "docs/api/server/open77-locomotion.md": {
+    "url": "https://open2077.net/docs/api/server/open77-locomotion.md",
+    "bytes": 5852,
+    "sha256": "f986f135525c170d92548a3ce0e3bf0c85cac5acfa962749543e5c076d428bb3"
+  },
+  "docs/api/server/open77-log.md": {
+    "url": "https://open2077.net/docs/api/server/open77-log.md",
+    "bytes": 3513,
+    "sha256": "46cabd3de5320f127141d472554633c83608db6d5fc4c2d6e7afd64d6e4d99b7"
+  },
+  "docs/api/server/open77-loot.md": {
+    "url": "https://open2077.net/docs/api/server/open77-loot.md",
+    "bytes": 3757,
+    "sha256": "e3737e5dcf61f6b6f1da61603a5ec3eb7bd52bdf99a829ba6de8e9b1d6d269a6"
+  },
+  "docs/api/server/open77-metrics.md": {
+    "url": "https://open2077.net/docs/api/server/open77-metrics.md",
+    "bytes": 4354,
+    "sha256": "55a40de46ba6d22c52a03e8ad7c483d983824526f9b23c20ffa1192b85d0b445"
+  },
+  "docs/api/server/open77-motion.md": {
+    "url": "https://open2077.net/docs/api/server/open77-motion.md",
+    "bytes": 5204,
+    "sha256": "85b7ba9aa182f5d53d3f2e9f99fbc50529bafb952d0559256fcf3409c6d64567"
+  },
+  "docs/api/server/open77-net.md": {
+    "url": "https://open2077.net/docs/api/server/open77-net.md",
+    "bytes": 10572,
+    "sha256": "888536eca49e7bf5159a3737b2de091f4de5ccab9b01e765add228ebcf81e14d"
+  },
+  "docs/api/server/open77-notifications.md": {
+    "url": "https://open2077.net/docs/api/server/open77-notifications.md",
+    "bytes": 5500,
+    "sha256": "93e1e76e294a3558b3a2ac29bccd12726d7079719c9c5cfc4540a276323d8fd0"
+  },
+  "docs/api/server/open77-npcs.md": {
+    "url": "https://open2077.net/docs/api/server/open77-npcs.md",
+    "bytes": 48551,
+    "sha256": "6cce47644416f87358c07790215a3b00e7ec090dc48efe7546b0f107fb76488f"
+  },
+  "docs/api/server/open77-npcs-tasks.md": {
+    "url": "https://open2077.net/docs/api/server/open77-npcs-tasks.md",
+    "bytes": 32711,
+    "sha256": "af1acc993ae04b3318c710eb3108005472ccbab477f4853e50ce30448e513142"
+  },
+  "docs/api/server/open77-perspective.md": {
+    "url": "https://open2077.net/docs/api/server/open77-perspective.md",
+    "bytes": 1942,
+    "sha256": "cd8ba3754b9ee4cf9ef2a4ef172a43d0b5593c82ca23667b0116970d0ea449bd"
+  },
+  "docs/api/server/open77-playerinteractions.md": {
+    "url": "https://open2077.net/docs/api/server/open77-playerinteractions.md",
+    "bytes": 8785,
+    "sha256": "7ef1363ec3342d96a700eb906fa34e6e4a7289b8ab6322dba916c9ae9b2a74e3"
+  },
+  "docs/api/server/open77-players.md": {
+    "url": "https://open2077.net/docs/api/server/open77-players.md",
+    "bytes": 110251,
+    "sha256": "13f4dc4e701d148dffa9e203f7b3ffd0d3974452bd0042252ae1c9485c736d02"
+  },
+  "docs/api/server/open77-preflight.md": {
+    "url": "https://open2077.net/docs/api/server/open77-preflight.md",
+    "bytes": 7445,
+    "sha256": "cdfe6c9c6cd2fffab4c8ec416205d79ae9c3226b52dbc8ff1ec48532706b422f"
+  },
+  "docs/api/server/open77-promise.md": {
+    "url": "https://open2077.net/docs/api/server/open77-promise.md",
+    "bytes": 4508,
+    "sha256": "8af5a5e12402dc044edcb7ca8709a2425ae83f171204d3c5393cdfe4b6855b61"
+  },
+  "docs/api/server/open77-props.md": {
+    "url": "https://open2077.net/docs/api/server/open77-props.md",
+    "bytes": 15347,
+    "sha256": "106c0bf2cd7802023b400b2d56b8b1c9631b3bb1ee68174a73383f1e18238aa3"
+  },
+  "docs/api/server/open77-ragdoll.md": {
+    "url": "https://open2077.net/docs/api/server/open77-ragdoll.md",
+    "bytes": 4734,
+    "sha256": "d570ef8e88b8b1f476dec0de3ebc5009029b7c2d9d73350deed0564063a2e2fa"
+  },
+  "docs/api/server/open77-ready.md": {
+    "url": "https://open2077.net/docs/api/server/open77-ready.md",
+    "bytes": 4654,
+    "sha256": "433332b4723969d6b58bbfdb9eb31045534a66d32378e22db614c4f7ec0e4f7a"
+  },
+  "docs/api/server/open77-reflex.md": {
+    "url": "https://open2077.net/docs/api/server/open77-reflex.md",
+    "bytes": 6034,
+    "sha256": "d6cc54c7b5825fdee764743bee85341779c1c664239764d365794eb19b56eec3"
+  },
+  "docs/api/server/open77-resource.md": {
+    "url": "https://open2077.net/docs/api/server/open77-resource.md",
+    "bytes": 6580,
+    "sha256": "8d5c2c47005e8a2625fe3461e46d6940ad574c7e9445f1da370a7e56b18346a2"
+  },
+  "docs/api/server/open77-routingbuckets.md": {
+    "url": "https://open2077.net/docs/api/server/open77-routingbuckets.md",
+    "bytes": 4500,
+    "sha256": "448a7364880209dfdf91dd3494f98127e066601f73fefc2cff0a3b1826b34b2b"
+  },
+  "docs/api/server/open77-runtime.md": {
+    "url": "https://open2077.net/docs/api/server/open77-runtime.md",
+    "bytes": 6762,
+    "sha256": "75864726877f48494cc1dfff73e2598f6100a327addbe0894eed3215aa591536"
+  },
+  "docs/api/server/open77-sound.md": {
+    "url": "https://open2077.net/docs/api/server/open77-sound.md",
+    "bytes": 6420,
+    "sha256": "79245ee0262d03a185bd944a0d29bad652805968998ca5fe39ebb595820d4e34"
+  },
+  "docs/api/server/open77-state.md": {
+    "url": "https://open2077.net/docs/api/server/open77-state.md",
+    "bytes": 8373,
+    "sha256": "76bea947661508ed74befdcf07d2bb0fef39a5b97d13855c445fcee341abadd6"
+  },
+  "docs/api/server/open77-stats.md": {
+    "url": "https://open2077.net/docs/api/server/open77-stats.md",
+    "bytes": 14597,
+    "sha256": "ec9223e0be55593adf676c054ef8e7b3c09ea4e4d5615df98373c611345aac66"
+  },
+  "docs/api/server/open77-statuses.md": {
+    "url": "https://open2077.net/docs/api/server/open77-statuses.md",
+    "bytes": 2687,
+    "sha256": "75fa0b97c117e054f7e41e5a381c0e7aa7878af999ad5fb0003d934933369265"
+  },
+  "docs/api/server/open77-time.md": {
+    "url": "https://open2077.net/docs/api/server/open77-time.md",
+    "bytes": 1745,
+    "sha256": "f172dcec8f8325e6d5d7789198157dd9db1c6d3e93397a7b90b8e9c4bde75c10"
+  },
+  "docs/api/server/open77-tunables.md": {
+    "url": "https://open2077.net/docs/api/server/open77-tunables.md",
+    "bytes": 5323,
+    "sha256": "c458935fba1a20d120cb7681e600e05f8b872eaa59db4535fa74084c534b2b7c"
+  },
+  "docs/api/server/open77-vehicles.md": {
+    "url": "https://open2077.net/docs/api/server/open77-vehicles.md",
+    "bytes": 201718,
+    "sha256": "ebe5c16d9af7bf12298ee4c55e0bc01b4c5e64cedfee3fc769b51303b7a5cd24"
+  },
+  "docs/api/server/open77-vehicles-ai.md": {
+    "url": "https://open2077.net/docs/api/server/open77-vehicles-ai.md",
+    "bytes": 21665,
+    "sha256": "fdb789f2ef58ba2391e482ee392729059e3358b8b2e8c25c85b23d480e01bcb2"
+  },
+  "docs/api/server/open77-voice.md": {
+    "url": "https://open2077.net/docs/api/server/open77-voice.md",
+    "bytes": 14819,
+    "sha256": "997b3134c9a60016aa31533069ca635e94e3438d70e536f8ffc04f9bbd511690"
+  },
+  "docs/api/server/open77-weapons.md": {
+    "url": "https://open2077.net/docs/api/server/open77-weapons.md",
+    "bytes": 25915,
+    "sha256": "c4269d6ad1dfafcdb7cf4a84414355e727d6ba0dacdef7fa8cba65c3f2fbb092"
+  },
+  "docs/api/server/open77-world.md": {
+    "url": "https://open2077.net/docs/api/server/open77-world.md",
+    "bytes": 14439,
+    "sha256": "76d3995e68ce9f2686a77af7c8145addb0d9a016bb978064582eff834e1491f5"
+  },
+  "docs/api/server/open77-zones.md": {
+    "url": "https://open2077.net/docs/api/server/open77-zones.md",
+    "bytes": 11176,
+    "sha256": "e43bbcaa68215dbc8545b80b5015963eb2c7fd8a1da3d90ddeaa9dc0d1b2d81a"
+  },
+  "docs/api/server/promise.md": {
+    "url": "https://open2077.net/docs/api/server/promise.md",
+    "bytes": 930,
+    "sha256": "6d7ecd6039b00925c447989878fdf68703e0d1a5bc10b560702c4f1923427ea3"
+  },
+  "docs/api/server/r.md": {
+    "url": "https://open2077.net/docs/api/server/r.md",
+    "bytes": 12331,
+    "sha256": "279b236516cf5c18bc2086f618e7a337112d2aacbd25c51ce0898b1a6e553894"
+  },
+  "docs/api/server/redis.md": {
+    "url": "https://open2077.net/docs/api/server/redis.md",
+    "bytes": 6315,
+    "sha256": "b0038c1b9c43757d7928240d70d1460ef88b58448882102219cefc63d0b32451"
+  },
+  "docs/api/server/redis-connect.md": {
+    "url": "https://open2077.net/docs/api/server/redis-connect.md",
+    "bytes": 1259,
+    "sha256": "2004af520c49c54b41c44d1c1621d48e2707c0483f1f24e70241260ad8fab88e"
+  },
+  "docs/api/server/session.md": {
+    "url": "https://open2077.net/docs/api/server/session.md",
+    "bytes": 8254,
+    "sha256": "b529ca3462feb86752093502100c7aff27e6a31acbfda68080c18690c194de9f"
+  },
+  "docs/api/server/sqlite.md": {
+    "url": "https://open2077.net/docs/api/server/sqlite.md",
+    "bytes": 4223,
+    "sha256": "5bcad563cbeb5d96bac29f286de662e1f7d81996b96b60a31c803c7b689dcb2f"
+  },
+  "docs/api/server/sqlite-open.md": {
+    "url": "https://open2077.net/docs/api/server/sqlite-open.md",
+    "bytes": 1120,
+    "sha256": "4b9227af1c2eaf7ad2e7f2c74c359289edc748acde035de876c1ecf341941214"
+  },
+  "docs/api/client/globals.md": {
+    "url": "https://open2077.net/docs/api/client/globals.md",
+    "bytes": 72996,
+    "sha256": "344fcc6870de190e9244d2431bae8f2ae1802bb22080c0cb09aa2ea22f6a6bf8"
+  },
+  "docs/api/client/citizen.md": {
+    "url": "https://open2077.net/docs/api/client/citizen.md",
+    "bytes": 6192,
+    "sha256": "9a441eda3a5c045d52c01cfe3e0ae2eb8dd6b5aee8441f823becd11b0c84f23b"
+  },
+  "docs/api/client/resource-open77-doors.md": {
+    "url": "https://open2077.net/docs/api/client/resource-open77-doors.md",
+    "bytes": 4127,
+    "sha256": "57b063f2193f31fae6eda903ab60a60b5dcfc361b09e160b089217f30e5aa1f3"
+  },
+  "docs/api/client/open77-abilities.md": {
+    "url": "https://open2077.net/docs/api/client/open77-abilities.md",
+    "bytes": 8659,
+    "sha256": "857966151d72c7ed0e39262ce26a832a64691c252916bea81630778449416483"
+  },
+  "docs/api/client/open77-anchors.md": {
+    "url": "https://open2077.net/docs/api/client/open77-anchors.md",
+    "bytes": 7714,
+    "sha256": "004037a93456be42d29640f6aec8e269902757c47a347029e332c18543a4cd59"
+  },
+  "docs/api/client/open77-animations.md": {
+    "url": "https://open2077.net/docs/api/client/open77-animations.md",
+    "bytes": 27140,
+    "sha256": "8b40cae54614062afd527d5439184c5bcea55771ca1f35f285c70c7540d1a3bd"
+  },
+  "docs/api/client/open77-appearance.md": {
+    "url": "https://open2077.net/docs/api/client/open77-appearance.md",
+    "bytes": 5683,
+    "sha256": "b3505faece0cbec965d67bb01864af384ab00973883b406cdffb6dea8f9db410"
+  },
+  "docs/api/client/open77-assets.md": {
+    "url": "https://open2077.net/docs/api/client/open77-assets.md",
+    "bytes": 1451,
+    "sha256": "08ec8729a2f3ba62554bb1748d83d29aba8fea8e4ed2c42d0da7d26e308e4372"
+  },
+  "docs/api/client/open77-audio.md": {
+    "url": "https://open2077.net/docs/api/client/open77-audio.md",
+    "bytes": 11180,
+    "sha256": "833c2e017d1ec25fbe2cc4b4464201ab250c42093dc5943a8f2d6455f4e31296"
+  },
+  "docs/api/client/open77-blips.md": {
+    "url": "https://open2077.net/docs/api/client/open77-blips.md",
+    "bytes": 20828,
+    "sha256": "48fe67e6bf2322da632ca29ba54d9523f2ed7c7a7ad002d45c6c32e9979e9fe9"
+  },
+  "docs/api/client/open77-callbacks.md": {
+    "url": "https://open2077.net/docs/api/client/open77-callbacks.md",
+    "bytes": 3137,
+    "sha256": "f0faf52a8123d6d2e2563922a977cd999e13420d8bd64bfadb04a73cc3266df9"
+  },
+  "docs/api/client/open77-camera.md": {
+    "url": "https://open2077.net/docs/api/client/open77-camera.md",
+    "bytes": 32758,
+    "sha256": "4c1d11cd824efcaa75e43c4bc034b1b1fe6f140d40cfa71d26b3fc8db0a7e613"
+  },
+  "docs/api/client/open77-character.md": {
+    "url": "https://open2077.net/docs/api/client/open77-character.md",
+    "bytes": 28260,
+    "sha256": "e8dd5e1b6363889d297519b68d3ae7a95b14b0287789d33256037d6165b2b78f"
+  },
+  "docs/api/client/open77-chute.md": {
+    "url": "https://open2077.net/docs/api/client/open77-chute.md",
+    "bytes": 2549,
+    "sha256": "1dfc8c1cf8175db520d0749ed35b8899039349adf6473e5966d77efb26f40dc2"
+  },
+  "docs/api/client/open77-clipboard.md": {
+    "url": "https://open2077.net/docs/api/client/open77-clipboard.md",
+    "bytes": 1246,
+    "sha256": "a6e917a90d04bba898a309481869956d98d4e6993e20412e8df92ad912b6e342"
+  },
+  "docs/api/client/open77-consumables.md": {
+    "url": "https://open2077.net/docs/api/client/open77-consumables.md",
+    "bytes": 11575,
+    "sha256": "089951804565f13f480ef8a9580231d6a5e2134ba4c34daecb310d5a8321ca15"
+  },
+  "docs/api/client/open77-cyberware.md": {
+    "url": "https://open2077.net/docs/api/client/open77-cyberware.md",
+    "bytes": 22601,
+    "sha256": "d5da95444c46ec97e2ec8a15440f1b77ce98c9a8ddc836a110026f67d25a6f13"
+  },
+  "docs/api/client/open77-dash.md": {
+    "url": "https://open2077.net/docs/api/client/open77-dash.md",
+    "bytes": 1268,
+    "sha256": "b1fd3afa3cd64382a35203756b400ffa07213bc01440766d89f12d32af1b1176"
+  },
+  "docs/api/client/open77-data.md": {
+    "url": "https://open2077.net/docs/api/client/open77-data.md",
+    "bytes": 6999,
+    "sha256": "3e49a107013100c0ab0f331a1f90f96de8a52c041fbd47e8c1324764e18c6a95"
+  },
+  "docs/api/client/open77-debug.md": {
+    "url": "https://open2077.net/docs/api/client/open77-debug.md",
+    "bytes": 2454,
+    "sha256": "6ac8bb76c93d22f886cad77e02419b4f9ab1d61dfc8fa78bc7d6cb4754895ceb"
+  },
+  "docs/api/client/open77-debugdraw.md": {
+    "url": "https://open2077.net/docs/api/client/open77-debugdraw.md",
+    "bytes": 3327,
+    "sha256": "28c9e6efbd2994ae481cfc1aab4f94cbd8c9700d7f9ffa584bdfd43a4c5e5168"
+  },
+  "docs/api/client/open77-doors.md": {
+    "url": "https://open2077.net/docs/api/client/open77-doors.md",
+    "bytes": 19129,
+    "sha256": "b6c53050ad3a2966ad72d60efd282cd1c74b88542345b326bb91717cf3200403"
+  },
+  "docs/api/client/open77-elevators.md": {
+    "url": "https://open2077.net/docs/api/client/open77-elevators.md",
+    "bytes": 3323,
+    "sha256": "894bd473e1f56ef68190d059de2c28cfa8751fd428033b88b8415d9a09de1a09"
+  },
+  "docs/api/client/open77-environment.md": {
+    "url": "https://open2077.net/docs/api/client/open77-environment.md",
+    "bytes": 4522,
+    "sha256": "5822c058f98c75d07282531dfb4fa057d1398bb1b66d848f88fedc8488c100eb"
+  },
+  "docs/api/client/open77-equipment.md": {
+    "url": "https://open2077.net/docs/api/client/open77-equipment.md",
+    "bytes": 8969,
+    "sha256": "0b83e1c8ebbea57d1c24b29372d06feb6b6f90149eaa8abe29470f8752877025"
+  },
+  "docs/api/client/open77-events.md": {
+    "url": "https://open2077.net/docs/api/client/open77-events.md",
+    "bytes": 2307,
+    "sha256": "377b1adda65090f0e74d7ca97a6795407783e826e21dc99a5aa47ad0e5def0e2"
+  },
+  "docs/api/client/open77-exports.md": {
+    "url": "https://open2077.net/docs/api/client/open77-exports.md",
+    "bytes": 2582,
+    "sha256": "d3a0327918c9a79126db9f38fe4a2cc1ac423b646af232ccae2913a7f17e06c7"
+  },
+  "docs/api/client/open77-gizmos.md": {
+    "url": "https://open2077.net/docs/api/client/open77-gizmos.md",
+    "bytes": 12012,
+    "sha256": "175e54120b9b481a05f36108f22c6ad117f5232197b29580212c76f655178672"
+  },
+  "docs/api/client/open77-hacking.md": {
+    "url": "https://open2077.net/docs/api/client/open77-hacking.md",
+    "bytes": 7712,
+    "sha256": "44aa6cdcf8825e8a9dc2141252bfcdb14ed4d4c02b706262c9c045c573b1f5c1"
+  },
+  "docs/api/client/open77-hud.md": {
+    "url": "https://open2077.net/docs/api/client/open77-hud.md",
+    "bytes": 11850,
+    "sha256": "c631569964a5974038cf2cf795c6fd0786e9a247cb5b389a899e08178bdfca19"
+  },
+  "docs/api/client/open77-input.md": {
+    "url": "https://open2077.net/docs/api/client/open77-input.md",
+    "bytes": 22093,
+    "sha256": "df214c48eee4165c25f5df3521692a26284b1e77419aef27636186dd152e8236"
+  },
+  "docs/api/client/open77-inspector.md": {
+    "url": "https://open2077.net/docs/api/client/open77-inspector.md",
+    "bytes": 2321,
+    "sha256": "b6ed71d94a60824ee2af716ac46b1e6be4d1c4a08453bff89fc315956e11ee6b"
+  },
+  "docs/api/client/open77-json.md": {
+    "url": "https://open2077.net/docs/api/client/open77-json.md",
+    "bytes": 1558,
+    "sha256": "62c432c1b5580c59aba7b30e2dbc8238a7fcdde84c2e7f3ecaa522e1d8dfb6e6"
+  },
+  "docs/api/client/open77-kvp.md": {
+    "url": "https://open2077.net/docs/api/client/open77-kvp.md",
+    "bytes": 7718,
+    "sha256": "8610874695e7add06a30fbaf9301bc59a89e58dff90ff6891536fa54beb582e4"
+  },
+  "docs/api/client/open77-locomotion.md": {
+    "url": "https://open2077.net/docs/api/client/open77-locomotion.md",
+    "bytes": 1148,
+    "sha256": "a57caea2ac66964dcbd55994d9ef6ef950c2da12ea528e30bbd373b48643272b"
+  },
+  "docs/api/client/open77-log.md": {
+    "url": "https://open2077.net/docs/api/client/open77-log.md",
+    "bytes": 2555,
+    "sha256": "484bf438316bca37f6648b96b7e126ac2b4208c3ebee73f9b551300473a1997d"
+  },
+  "docs/api/client/open77-loot.md": {
+    "url": "https://open2077.net/docs/api/client/open77-loot.md",
+    "bytes": 4726,
+    "sha256": "ed62693fe2e14647247c414ee0225ddad6a9d1ed136b65558b2cb0708b518f73"
+  },
+  "docs/api/client/open77-map.md": {
+    "url": "https://open2077.net/docs/api/client/open77-map.md",
+    "bytes": 15833,
+    "sha256": "684f05177d8c4c284d72d56faa81cbc686dff21cf63f05caf2677026958678b5"
+  },
+  "docs/api/client/open77-markers.md": {
+    "url": "https://open2077.net/docs/api/client/open77-markers.md",
+    "bytes": 5883,
+    "sha256": "c9a8dfe1d3941ee20af1f4b437a01a8ee819ad8b8cca7635166d0704850329c4"
+  },
+  "docs/api/client/open77-media.md": {
+    "url": "https://open2077.net/docs/api/client/open77-media.md",
+    "bytes": 3217,
+    "sha256": "cde8385236f5b4c39ac3d545d7f593981a94193d014ce1d22954e992af089027"
+  },
+  "docs/api/client/open77-motion.md": {
+    "url": "https://open2077.net/docs/api/client/open77-motion.md",
+    "bytes": 9188,
+    "sha256": "95fbeab3644ba4ad33277d8affe17254993aac836ee536b6bb59c6ba72715d21"
+  },
+  "docs/api/client/open77-movement.md": {
+    "url": "https://open2077.net/docs/api/client/open77-movement.md",
+    "bytes": 5862,
+    "sha256": "a98a89f0820e0afa7bdc768a062c07276a43d2b65e427b906b7eca3f936f0c29"
+  },
+  "docs/api/client/open77-nameplates.md": {
+    "url": "https://open2077.net/docs/api/client/open77-nameplates.md",
+    "bytes": 16708,
+    "sha256": "993128f6458a977259dc29c7359e6ad2cdbbf91dd99b942f35afbe03a4a58bb4"
+  },
+  "docs/api/client/open77-net.md": {
+    "url": "https://open2077.net/docs/api/client/open77-net.md",
+    "bytes": 5725,
+    "sha256": "0b4bd5a2485c3431f6832a6ddb645d172e29c5c491b0652bc18c3acfd9ca7b90"
+  },
+  "docs/api/client/open77-network.md": {
+    "url": "https://open2077.net/docs/api/client/open77-network.md",
+    "bytes": 5056,
+    "sha256": "797e1b69c905da374fcc2a57bea1f10a2fa63b3bb295c57dc117f2a1bcdd19f4"
+  },
+  "docs/api/client/open77-npcs.md": {
+    "url": "https://open2077.net/docs/api/client/open77-npcs.md",
+    "bytes": 6354,
+    "sha256": "da602fb31e761c8ead4a8522f3f656f5fbdeb4bc3a7476fbab883bc25693c071"
+  },
+  "docs/api/client/open77-pausemenu.md": {
+    "url": "https://open2077.net/docs/api/client/open77-pausemenu.md",
+    "bytes": 2852,
+    "sha256": "aaf855c154d6a8024cc016170ce9eed420a5ef47d2fe795212f2baeb32962410"
+  },
+  "docs/api/client/open77-perspective.md": {
+    "url": "https://open2077.net/docs/api/client/open77-perspective.md",
+    "bytes": 9280,
+    "sha256": "b3d20826ea04a04af01fae36a7251e2560cd1aa80dec5555005903945ea9652d"
+  },
+  "docs/api/client/open77-photomode.md": {
+    "url": "https://open2077.net/docs/api/client/open77-photomode.md",
+    "bytes": 3192,
+    "sha256": "1ef8879b0feaa33c2330477eeccb68f9ad5a22c5f2fae72efd0ed9c4f3475642"
+  },
+  "docs/api/client/open77-playerinteractions.md": {
+    "url": "https://open2077.net/docs/api/client/open77-playerinteractions.md",
+    "bytes": 10466,
+    "sha256": "6e3007e5caaef21246c127691d00b44a7ea383785d3c72ff368feec7245e21bb"
+  },
+  "docs/api/client/open77-players.md": {
+    "url": "https://open2077.net/docs/api/client/open77-players.md",
+    "bytes": 51154,
+    "sha256": "96b90e8a09573ec7ba1177e971c4a40aa1d7331c083a5772f57f9d1f459e448e"
+  },
+  "docs/api/client/open77-prediction.md": {
+    "url": "https://open2077.net/docs/api/client/open77-prediction.md",
+    "bytes": 3455,
+    "sha256": "4af85522ed260e630900b6844a44d29723143b83526e8a44c570d46d358e97ac"
+  },
+  "docs/api/client/open77-prevention.md": {
+    "url": "https://open2077.net/docs/api/client/open77-prevention.md",
+    "bytes": 6723,
+    "sha256": "b0a767a5da68eac91f45b8c90af8d7c625dfca999c95491f0ef01313d122eb6c"
+  },
+  "docs/api/client/open77-promise.md": {
+    "url": "https://open2077.net/docs/api/client/open77-promise.md",
+    "bytes": 4413,
+    "sha256": "f7548b755abb9e9092084d0066df0292ebff60883503673588e4ba10e7de21dc"
+  },
+  "docs/api/client/open77-props.md": {
+    "url": "https://open2077.net/docs/api/client/open77-props.md",
+    "bytes": 12519,
+    "sha256": "7e39ef010a52dff11446dee32b2a68a7c322697984071cfdb2eaff432932e8a3"
+  },
+  "docs/api/client/open77-puppets.md": {
+    "url": "https://open2077.net/docs/api/client/open77-puppets.md",
+    "bytes": 5629,
+    "sha256": "87095cc001a8c486fcd5436eb2d8fd34ae3fcc964c03ed5599661d579b12ac16"
+  },
+  "docs/api/client/open77-reflex.md": {
+    "url": "https://open2077.net/docs/api/client/open77-reflex.md",
+    "bytes": 3521,
+    "sha256": "be814644e33f571c4f604b1d31c94cd1452dc5518bc321b26a224ce575dfd978"
+  },
+  "docs/api/client/open77-remotecamera.md": {
+    "url": "https://open2077.net/docs/api/client/open77-remotecamera.md",
+    "bytes": 18435,
+    "sha256": "928da551fdf0db111ae0709e03b4afc2540e2cab8feddacc83f0f359de7be3b6"
+  },
+  "docs/api/client/open77-resource.md": {
+    "url": "https://open2077.net/docs/api/client/open77-resource.md",
+    "bytes": 5953,
+    "sha256": "d2554012b2cd7afa720e32d8bd0ec6d5c5bd56f935789b0b9ee6505475165935"
+  },
+  "docs/api/client/open77-rtti.md": {
+    "url": "https://open2077.net/docs/api/client/open77-rtti.md",
+    "bytes": 6017,
+    "sha256": "bdf5aba1ec13b3f9443351cd96afaccbf20a3dccbb79b4eae47921e80adfd136"
+  },
+  "docs/api/client/open77-runtime.md": {
+    "url": "https://open2077.net/docs/api/client/open77-runtime.md",
+    "bytes": 5724,
+    "sha256": "f3e0c7f00b2fdf681ab7316fbfdad8e7b6dda59473492eea5523ae23e68023a2"
+  },
+  "docs/api/client/open77-screen.md": {
+    "url": "https://open2077.net/docs/api/client/open77-screen.md",
+    "bytes": 19758,
+    "sha256": "ee1251041d53a062d99fb2e887a5d8bec97f9fab162832ff3d6c2b9474fb3998"
+  },
+  "docs/api/client/open77-session.md": {
+    "url": "https://open2077.net/docs/api/client/open77-session.md",
+    "bytes": 16509,
+    "sha256": "6d941a4caf9e454a7edf6525e580c45037584269d1dcd919b3ac706bc999e809"
+  },
+  "docs/api/client/open77-settings.md": {
+    "url": "https://open2077.net/docs/api/client/open77-settings.md",
+    "bytes": 2138,
+    "sha256": "8926f59b979cb2308a407437a1b0691e4222cc0228fc15213dc16ea28b0c50e4"
+  },
+  "docs/api/client/open77-sfx.md": {
+    "url": "https://open2077.net/docs/api/client/open77-sfx.md",
+    "bytes": 5571,
+    "sha256": "df061d3125080a762ff2f115a4e931ba98dabe6a630b58649bccfaa58c398e66"
+  },
+  "docs/api/client/open77-state.md": {
+    "url": "https://open2077.net/docs/api/client/open77-state.md",
+    "bytes": 6440,
+    "sha256": "9f0aeef71330db28d7a584944c68300b5951dcc1748aafe0d8f121b11c34534a"
+  },
+  "docs/api/client/open77-stats.md": {
+    "url": "https://open2077.net/docs/api/client/open77-stats.md",
+    "bytes": 3877,
+    "sha256": "3df0f938d3ef201526d4a2f0808478db60fa657e4f1cda2e01ffdb3493ba4084"
+  },
+  "docs/api/client/open77-time.md": {
+    "url": "https://open2077.net/docs/api/client/open77-time.md",
+    "bytes": 769,
+    "sha256": "408040991c89483675a46c38fe7fc4aa6ddb99e05bb73e4f6ad131e872dcc94d"
+  },
+  "docs/api/client/open77-travel.md": {
+    "url": "https://open2077.net/docs/api/client/open77-travel.md",
+    "bytes": 10323,
+    "sha256": "6322cff6aa59a9a8be3c49e1e39e599c23898af5448df955737edba6b1694105"
+  },
+  "docs/api/client/open77-vehicles.md": {
+    "url": "https://open2077.net/docs/api/client/open77-vehicles.md",
+    "bytes": 57463,
+    "sha256": "765fee16fe87edfb65f8a391130009de86b65fa9a5a0150698958fcd6fa4bf11"
+  },
+  "docs/api/client/open77-vfx.md": {
+    "url": "https://open2077.net/docs/api/client/open77-vfx.md",
+    "bytes": 9573,
+    "sha256": "530c75ef816762b9b5c1433c2942bfe21ad12992ddaecd4e366119f3335a326b"
+  },
+  "docs/api/client/open77-voice.md": {
+    "url": "https://open2077.net/docs/api/client/open77-voice.md",
+    "bytes": 14571,
+    "sha256": "d5cc821a8c0fa1276365e586e87aeb8d2403c95dc717a7a89ce9caaed62beba0"
+  },
+  "docs/api/client/open77-wardrobe.md": {
+    "url": "https://open2077.net/docs/api/client/open77-wardrobe.md",
+    "bytes": 2637,
+    "sha256": "3eb0742f9708314df1cb0cb9584cd73df19b4e7684a671c1d45402b4f7ea0875"
+  },
+  "docs/api/client/open77-weapons.md": {
+    "url": "https://open2077.net/docs/api/client/open77-weapons.md",
+    "bytes": 30369,
+    "sha256": "91a73386037077133eb302b2d9276e9ef273e5e36dc2339b73f445ff6fdab179"
+  },
+  "docs/api/client/open77-webui.md": {
+    "url": "https://open2077.net/docs/api/client/open77-webui.md",
+    "bytes": 8182,
+    "sha256": "3b4eb1869a9c4869bd02b861b7fe0a2a69b84293e1ef5444d9355cb33dbc8a99"
+  },
+  "docs/api/client/open77-world.md": {
+    "url": "https://open2077.net/docs/api/client/open77-world.md",
+    "bytes": 26775,
+    "sha256": "0b30051957cbd2362bc2895c9e5e87caca109fb9d8f617c36b6a7f6f7a4f2edc"
+  },
+  "docs/api/client/open77-zones.md": {
+    "url": "https://open2077.net/docs/api/client/open77-zones.md",
+    "bytes": 6286,
+    "sha256": "cadc6cbb4fba10156c9ae3c9d2e27ae97c5a22b2b77c7ef7b18bab02e5cd0da1"
+  },
+  "docs/api/client/promise.md": {
+    "url": "https://open2077.net/docs/api/client/promise.md",
+    "bytes": 1228,
+    "sha256": "5f3730234b227cf45e14a29cbecbfa611ff2db99c8f4191bb15bf75222acee03"
+  },
+  "docs/api/client/webui-page.md": {
+    "url": "https://open2077.net/docs/api/client/webui-page.md",
+    "bytes": 9144,
+    "sha256": "f1dbef91aa1f3afd1677a9eba6f6d95f9c7f96d86ea086deb6402ebe9a19fa4d"
+  },
+  "sitemap.xml": {
+    "url": "https://open2077.net/sitemap.xml",
+    "bytes": 2957568,
+    "sha256": "287e40e44cebdbd5f0c465ce93e3eca4794d303686a160c1dc9613d5f530e0d1"
+  },
+  "app/api/api.json": {
+    "url": "https://raw.githubusercontent.com/Open2077/open77-app/main/content/api/api.json",
+    "bytes": 2660966,
+    "sha256": "1eaeac03801a6c2a5d1a68247694abf8dfb38d0784e04d18bb8f92d1a88c505f"
+  },
+  "app/docs/meta.json": {
+    "url": "https://raw.githubusercontent.com/Open2077/open77-app/main/content/docs/meta.json",
+    "bytes": 75679,
+    "sha256": "b43007f5e6263fe450a98453d5bd31a278a81e0452b6a79c71d6f62729a92fbf"
+  }
+}

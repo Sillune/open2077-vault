@@ -1,0 +1,99 @@
+{
+ "formatVersion": 1,
+ "build": "2.50.0+op77.208",
+ "generatedAt": "2026-11-20T11:43:58.402Z",
+ "docsSyncedAt": "2026-09-24T12:33:14.568Z",
+ "source": {
+  "repository": "https://github.com/Open2077/open77-app",
+  "commit": "f5aa7fd2563b1978d8728cafa2d14432bd83361e"
+ },
+ "counts": {
+  "cards": 1814,
+  "releases": 115,
+  "siteGuides": 69,
+  "guides": 184,
+  "sections": 2555,
+  "fivem": 115,
+  "catalogues": 9,
+  "schemas": 2,
+  "directives": 19
+ },
+ "files": {
+  "cards.json": {
+   "sha256": "1eaeac03801a6c2a5d1a68247694abf8dfb38d0784e04d18bb8f92d1a88c505f",
+   "bytes": 2660966
+  },
+  "events.json": {
+   "sha256": "f51f3b34e82808a4c208febc7a63f461643d6a140f7d0af1c13e68f42830a086",
+   "bytes": 400344
+  },
+  "permissions.json": {
+   "sha256": "a5d6fbdb034e3b752fbe9631552a2575d273c38c71f6e3a0f9e1560eb22f6303",
+   "bytes": 161708
+  },
+  "releases.json": {
+   "sha256": "d034c1ba022660bfab378c27a623a36f3a260874d2f7860d5e4999e74d641ab7",
+   "bytes": 9814
+  },
+  "guides.json": {
+   "sha256": "b0364e009913ebf3115add90b276c1417ccc4635b804fe332e70cbca2dd2f6cb",
+   "bytes": 3708932
+  },
+  "fivem-map.json": {
+   "sha256": "275a4ba25b045e82ae4a73f5255149f56278bb312e74c3dc63402dc9f3034362",
+   "bytes": 34607
+  },
+  "catalogues/animations.json": {
+   "sha256": "8bf8f90d26e90f8b56402bcfb68b922c78553e151e4968262df6e59d6038ba67",
+   "bytes": 1184001
+  },
+  "catalogues/animsets.json": {
+   "sha256": "769ae3b9ff2a8d9866e70454b81c083de751d5ad44ed758d4de4c88b7e9468b0",
+   "bytes": 542891
+  },
+  "catalogues/items.json": {
+   "sha256": "035d7e8a4f4bc4529e8fc57dd651be37edffaaa07ae27f839a097c54a46d3c0a",
+   "bytes": 388367
+  },
+  "catalogues/npc-templates.json": {
+   "sha256": "48c55211881c637b03a8935a20e470319c76ceb395fa281e0f2b77d474177827",
+   "bytes": 384967
+  },
+  "catalogues/props.json": {
+   "sha256": "0f3ee52df55fddca0a19a1405150fefc6dfa0467cf8adb51cd0199c7913f394c",
+   "bytes": 1579068
+  },
+  "catalogues/sfx.json": {
+   "sha256": "b2fc95b6f7d2846eee0b1eac1babf132bb3bcc51de022cbb02db640093fabcd1",
+   "bytes": 2381588
+  },
+  "catalogues/vehicles.json": {
+   "sha256": "6c99e17dbf362421f041d110299313158cb289e5cd102a28d7152e6e45339572",
+   "bytes": 267779
+  },
+  "catalogues/vfx.json": {
+   "sha256": "82589c0e6cf56027a5e111ce48be46d1da2304945f33ea819b21634e151dc09f",
+   "bytes": 167357
+  },
+  "catalogues/weapons.json": {
+   "sha256": "fafc6062556583da6b3e10ca0cf5bf9ac7e23c664ea427f38c0b3a21e6a670eb",
+   "bytes": 419182
+  },
+  "schemas/manifest.schema.json": {
+   "sha256": "3ebc2838dc053d0595838b461de0c7dec57630bb2c453117477a90ef34ade8f8",
+   "bytes": 5590
+  },
+  "schemas/server-config.schema.json": {
+   "sha256": "409860b6f1f6570be240d5c80ebf2cb92224ca420c82171d00bfcc868d28fcbc",
+   "bytes": 32772
+  },
+  "open77-client.d.lua": {
+   "sha256": "75d24a7b917fcc080af7d172c557127a3da1f541f7d79e34fd8cf79ea5d7f7d5",
+   "bytes": 600750
+  },
+  "open77-server.d.lua": {
+   "sha256": "fd24ed90e12789c7d4fa18ccee0c9820bfa3b4d2c33c3693b951a7eb5cdc627b",
+   "bytes": 793999
+  }
+ }
+}

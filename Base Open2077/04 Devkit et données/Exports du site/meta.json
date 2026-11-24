@@ -1,0 +1,1526 @@
+{
+  "$comment": "Documentation navigation. Hand-maintained: the wiki has no ordering of its own, so this file is the single source of truth for sidebar structure, short nav labels and search-engine descriptions. `kind: \"guide\"` resolves to content/docs/<slug>.md, whose reviewed prose is maintained on the site; adding `\"source\": \"authored\"` reads content/guides/<slug>.md instead, which is authored in this repository and never touched by the sync. `kind: \"page\"` is a route implemented in src/app.",
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "Start here",
+      "group": "Start & host",
+      "description": "Install the launcher, discover the platform and find community resources.",
+      "pages": [
+        {
+          "slug": "index",
+          "kind": "guide",
+          "file": "README.md",
+          "nav": "Home",
+          "title": "OPEN//77 documentation",
+          "description": "How OPEN//77 packages gameplay as resources: the session model, the authoritative server, a hello-world manifest, and the conventions shared by every Lua API."
+        },
+        {
+          "slug": "alpha-access",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Open Alpha: get started",
+          "title": "Open Alpha: play, host and build",
+          "description": "Play, host a server and build with Lua in Open Alpha. Public downloads, free accounts and server licenses without an access application or approval."
+        },
+        {
+          "slug": "platform",
+          "kind": "page",
+          "nav": "How the platform works",
+          "title": "How OPEN//77 works",
+          "description": "What OPEN//77 is and is not, how players connect, why it is built on dedicated servers rather than peer-to-peer sessions, the project roadmap, and answers to the questions people ask most."
+        },
+        {
+          "slug": "launcher",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "The launcher",
+          "title": "The OPEN//77 launcher",
+          "description": "The player's guide to the OPEN//77 launcher: installing it, the SmartScreen warning on an unsigned executable and what it actually means, signing in, how it verifies your game build, the mod menu and everything it refuses to do silently, joining a world, direct-connect links, how it updates itself, and where its log is."
+        },
+        {
+          "slug": "community-hub",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "The Workshop",
+          "title": "The Workshop: install and share resources",
+          "description": "The free OPEN//77 Workshop: paste a creation link into Warden to install, update or roll back a resource; publish your own as a ZIP or GitHub release with screenshots and a hover clip; what moderators check, versions, licenses, discussion and the upload rejection reasons."
+        }
+      ]
+    },
+    {
+      "id": "server",
+      "title": "Hosting & administration",
+      "group": "Start & host",
+      "description": "Set up, brand and operate your server with Warden.",
+      "pages": [
+        {
+          "slug": "host-a-server",
+          "kind": "page",
+          "nav": "Host your own server",
+          "title": "Host your own server",
+          "description": "A step-by-step guide to running your own OPEN//77 dedicated server: get the Windows or Linux build, mint a license key, walk the first-run setup, edit server.jsonc, launch it, and watch it appear automatically in the launcher."
+        },
+        {
+          "slug": "server-startup",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Startup arguments & logging",
+          "title": "Server startup arguments and logging",
+          "description": "Configure server log levels and verbose output, override JSONC fields with startup arguments or environment variables, provision public VPS addresses and validate configuration before boot."
+        },
+        {
+          "slug": "server-licensing",
+          "kind": "page",
+          "nav": "Server licensing",
+          "title": "Server licensing",
+          "description": "How a server joins the OPEN//77 platform: create an account, mint a license key in the keymaster, put the key in your server config, and how the master authorises the server on boot."
+        },
+        {
+          "slug": "database",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "SQL database setup",
+          "title": "Configure a SQL database",
+          "description": "Connect an OPEN//77 server to MySQL or MariaDB: install SQL, create a dedicated account, configure credentials, verify readiness from Lua, diagnose failures and back up persistent data."
+        },
+        {
+          "slug": "launcher-for-server-owners",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Your server in the launcher",
+          "title": "Your server in the launcher",
+          "description": "How the OPEN//77 launcher reaches your world: how a server appears in the browser at all, what a catalogue row actually carries, the open77:// deep-link contract for your own Join buttons, what a connecting player must have, and how a world declares the mods every player must load."
+        },
+        {
+          "slug": "connection-preflight",
+          "kind": "guide",
+          "nav": "Connection preflight",
+          "title": "Connection preflight: the launcher's server check",
+          "description": "Check and greet players in the OPEN//77 launcher before the game starts: the server check flow, the preflight block of server.jsonc, the default open77_preflight resource (welcome, bans, whitelist applications, rules, maintenance), Warden requests, console commands, compatibility and troubleshooting."
+        },
+        {
+          "slug": "server-branding",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Branding your server",
+          "title": "Branding your server",
+          "description": "Give your server an icon and a banner from the Warden panel, with no SSH and no restart: what the two images are, the real size and shape limits (including the combined budget that decides whether your server is listed at all), and what to check when an image does not appear."
+        },
+        {
+          "slug": "launcher-text-formatting",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Launcher colors & text styles",
+          "title": "Launcher colors & text styles",
+          "description": "Style your server name and description with color codes, bold, italic and variable-width text. Try the live palette, preview your name and copy ready-to-use examples."
+        }
+      ]
+    },
+    {
+      "id": "server-administration",
+      "title": "Server administration",
+      "group": "Start & host",
+      "description": "Operate your server with Warden and RCON, and monitor its load with Prometheus metrics.",
+      "pages": [
+        {
+          "slug": "warden",
+          "kind": "page",
+          "nav": "Warden admin panel",
+          "title": "Warden",
+          "description": "Warden is the OPEN//77 in-server admin panel: a browser control room for live console, Lua resources, players, configuration and admins. Review operations that require a restart."
+        },
+        {
+          "slug": "rcon",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "RCON & TCP protocol",
+          "title": "RCON: authenticated TCP administration",
+          "description": "Configure authenticated TCP administration, connect dashboard backends, implement the Open77 RCON protocol, stream logs and transfer files with Warden permissions, TLS and resumable sessions."
+        },
+        {
+          "slug": "metrics",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Prometheus metrics",
+          "title": "Prometheus metrics",
+          "description": "Monitor CPU, RAM, ticks, network traffic, players and gameplay. Configure secure Prometheus collection, build Grafana graphs and export custom Lua metrics for stress tests."
+        },
+        {
+          "slug": "community-hub-warden",
+          "kind": "guide",
+          "nav": "Workshop resources in Warden",
+          "title": "Manage Workshop resources with Warden",
+          "description": "Install a Workshop creation from its pasted link, review the plan, update, uninstall and roll back; the Workshop chip in the Resources tab, revoked releases, preload restart staging, local configuration and retained backups."
+        },
+        {
+          "slug": "warden-players",
+          "kind": "guide",
+          "nav": "Players tab in Warden",
+          "description": "The live roster in Warden — ping, health, life state, match — and the per-row admin actions: warn, kick, ban, grant rights, heal, freeze and move, plus why spectate cannot be adapted from a browser."
+        }
+      ]
+    },
+    {
+      "id": "scripting",
+      "title": "Lua & resources",
+      "group": "Build resources",
+      "description": "Learn manifests, modules, exports and the resource lifecycle.",
+      "pages": [
+        {
+          "slug": "server-resources",
+          "kind": "guide",
+          "nav": "Server resources",
+          "description": "Resource manifests, the client and server runtime split, signing and download, hot reload, and the security model around resources the server hands to connecting players."
+        },
+        {
+          "slug": "resource-runtime",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "The Lua runtime",
+          "title": "The Lua resource runtime",
+          "description": "What a resource actually gets: the complete manifest reference, the scheduler and lifecycle events, local and network events, modules and cross-resource exports, the core Open77 namespaces, WebUI surfaces, and every sandbox quota."
+        },
+        {
+          "slug": "lua-modules",
+          "kind": "guide",
+          "nav": "Lua modules and require",
+          "description": "Local modules, published dependency libraries and `require`: the per-resource cache, the permissions a module runs under, what reload does to it, and how a module differs from an export."
+        },
+        {
+          "slug": "vectors",
+          "kind": "guide",
+          "nav": "Vectors and quaternions",
+          "description": "`vector2`, `vector3`, `vector4`, `vec` and `quat` in both Lua runtimes: arithmetic, swizzles, `#` for magnitude, distance helpers — and the guarantee that plain tables keep working everywhere."
+        },
+        {
+          "slug": "server-exports",
+          "kind": "guide",
+          "nav": "Cross-resource server exports",
+          "description": "Publish and call asynchronous exports across isolated server resources: complete Lua examples, caller identity, permissions, safe values, timeouts and reload behavior."
+        },
+        {
+          "slug": "resource-exports",
+          "kind": "guide",
+          "nav": "Built-in resource exports",
+          "description": "Every client export published by the official OPEN//77 resource packages, with signatures per package and how to call them safely across resources."
+        },
+        {
+          "slug": "fivem-compatibility",
+          "kind": "guide",
+          "nav": "FiveM compatibility",
+          "description": "The `Citizen` table, `SetTick`, generic promises and the shared-script helpers that let a FiveM script run unchanged, the three places OPEN//77 deliberately answers differently, and what is still missing."
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "title": "Data & services",
+      "group": "Build resources",
+      "description": "Store data and reach outside services from server Lua: SQLite files, Redis, and HTTP requests.",
+      "pages": [
+        {
+          "slug": "sqlite",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "SQLite databases",
+          "title": "SQLite databases from Lua",
+          "description": "Open, configure and close SQLite files from server Lua with no server configuration: the sqlite.access permission, open options, query/insert/execute/batch/transaction/backup, parameters, concurrency, lifecycle, errors and limits."
+        },
+        {
+          "slug": "redis",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Redis",
+          "title": "Redis from Lua",
+          "description": "Connect to Redis from server Lua with no server configuration: the redis.access permission, URLs and options, every command, pipelines, transactions with WATCH, server-side scripts, scans, blocking queues, publish/subscribe, reconnection, errors and limits."
+        },
+        {
+          "slug": "http-client",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "HTTP requests",
+          "title": "HTTP requests from Lua",
+          "description": "Call web APIs, webhooks and file hosts from server Lua: every method, JSON, form and multipart bodies, binary data, authentication, redirects, timeouts, cancellation, uploads, downloads, the operator allow-list, errors and limits."
+        }
+      ]
+    },
+    {
+      "id": "networking",
+      "title": "Networking & access",
+      "group": "Build resources",
+      "description": "Handle identity, admission, permissions and replicated state.",
+      "pages": [
+        {
+          "slug": "identity",
+          "kind": "guide",
+          "nav": "Player identity",
+          "description": "Durable player identifiers, session-scoped ids, display names, the rename flow, and what a game server can actually verify about a connecting player."
+        },
+        {
+          "slug": "connection-control",
+          "kind": "guide",
+          "nav": "Connection control",
+          "description": "Connect events, admission deferrals, whitelists, bans and disconnect reasons."
+        },
+        {
+          "slug": "preflight-lua",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Preflight in Lua",
+          "title": "Preflight in Lua",
+          "description": "Own the launcher's server check from a Lua resource: onPreflight and its events, the session object, fail-open rules, Open77.access for bans and whitelist requests, player.preflight at the gate, and recipes for applications, Discord, rules, maintenance and queues."
+        },
+        {
+          "slug": "server-acl",
+          "kind": "guide",
+          "nav": "Commands & permissions",
+          "description": "Exporting a public identity, whitelisting a player, and declaring restricted server commands behind the access control list."
+        },
+        {
+          "slug": "callbacks",
+          "kind": "guide",
+          "nav": "Network callbacks",
+          "description": "Ask the other side a question and wait for the answer: `Open77.callbacks` in both directions, promise results, per-resource namespacing, timeouts, limits and why a callback is a request rather than a grant."
+        },
+        {
+          "slug": "state-bags",
+          "kind": "guide",
+          "nav": "Replicated state bags",
+          "description": "Key/value state attached to the server, a player or an entity that replicates itself: selectors, change handlers, who is entitled to see what, the caps, and why a client can never write a bag."
+        },
+        {
+          "slug": "readiness-gate",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Join-time readiness gate",
+          "title": "The join-time readiness gate",
+          "description": "Open77.ready: the host-owned barrier that stops one resource teleporting, spawning or killing a player another resource is not finished with. Holds, timeouts, the session number, and the rule every gamemode must follow."
+        },
+        {
+          "slug": "client-kvp",
+          "kind": "guide",
+          "nav": "Client persistent KVP",
+          "description": "Endpoint- and resource-isolated local key/value persistence: CRUD, search, atomic operations, quotas, and why it must never hold secrets."
+        },
+        {
+          "slug": "prediction",
+          "kind": "guide",
+          "nav": "Prediction",
+          "description": "Instant feedback for the acting player: what the client, open77_cyberware and open77_prediction each provide, the seven prediction families, the server verdict and smooth rollback, operator switches and latency ceiling, gamemode restrictions, telemetry, and an index of the related NPC, door, weapon and combat APIs."
+        }
+      ]
+    },
+    {
+      "id": "gamemodes",
+      "title": "Gamemodes & configuration",
+      "group": "Build resources",
+      "description": "Build a mode, configure its rules and use the reference modes.",
+      "pages": [
+        {
+          "slug": "writing-a-gamemode",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Writing a gamemode",
+          "title": "Writing a gamemode",
+          "description": "Build an OPEN//77 gamemode with local state-machine files or shared server services, move players safely, isolate rounds in routing buckets, and validate authority and lifecycle."
+        },
+        {
+          "slug": "gamemode-kernel",
+          "kind": "guide",
+          "nav": "The gamemode kernel",
+          "description": "Modular gamemode architecture: shared server services through asynchronous exports, isolated ownership, generated state-machine patterns and gameplay conventions."
+        },
+        {
+          "slug": "tunables",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Operator tunables",
+          "title": "Operator tunables",
+          "description": "Open77.tunables: declaring the numbers a server owner may retune live from the admin panel, the file-scope local that silently defeats it, and choosing between live, promote and per-match capture."
+        },
+        {
+          "slug": "deathmatch",
+          "kind": "guide",
+          "nav": "Deathmatch",
+          "description": "Free-for-all and arena modes, loadouts, bots, scoring and configuration."
+        },
+        {
+          "slug": "cordon",
+          "kind": "guide",
+          "nav": "Cordon: battle royale",
+          "description": "Squads, the closing cordon, loot, revives and configuration."
+        },
+        {
+          "slug": "chimera",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Chimera boss (PvE)",
+          "title": "Chimera boss encounter (PvE)",
+          "description": "Run the Phantom Liberty Chimera as a server-controlled multiplayer boss: install, exports, phases and repair, weak spots, difficulty scaling, targeting, the staff lab menu and a raid built around it."
+        }
+      ]
+    },
+    {
+      "id": "players",
+      "title": "Players & movement",
+      "group": "Game systems",
+      "description": "Find players, read their state and control movement and travel.",
+      "pages": [
+        {
+          "slug": "client-players",
+          "kind": "guide",
+          "nav": "Players around you",
+          "description": "Enumerate the other players a client can already see — ids, bodies, distances and the nearest one — with no permission at all, and why a player id does not outlive a body."
+        },
+        {
+          "slug": "player-utilities",
+          "kind": "guide",
+          "nav": "Player checks & controls",
+          "description": "Read player state and apply resource-owned control restrictions, including native encumbrance suppression and equipment package configuration."
+        },
+        {
+          "slug": "local-puppet-visibility",
+          "kind": "guide",
+          "nav": "Local avatar visibility",
+          "description": "Hide the local player body and held weapon in first or third person, with resource-owned requests and a Prop Hunt example."
+        },
+        {
+          "slug": "player-stats",
+          "kind": "guide",
+          "nav": "Health and stamina",
+          "description": "Read player statistics and control health, stamina and regeneration."
+        },
+        {
+          "slug": "player-freeze",
+          "kind": "guide",
+          "nav": "Freezing a player",
+          "description": "Hold a player's body still: the authoritative server freeze on the engine's own movement restriction, the presentation-local client hold, what a freeze stops and what it deliberately does not."
+        },
+        {
+          "slug": "active-ragdoll",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Active ragdoll",
+          "title": "Active ragdoll",
+          "description": "Knock players down with a physically simulated body that still reacts, seen by every player: server leases and profiles, the client Open77.ragdoll API, the reaction library, the camera that follows the body, and the limits."
+        },
+        {
+          "slug": "travel",
+          "kind": "guide",
+          "nav": "Travel and settling",
+          "description": "Move the local player's body and know when it has really arrived: the two teleports and why there are two, what “settled” actually tests, raw settle tickets, noclip and the map pick."
+        }
+      ]
+    },
+    {
+      "id": "characters",
+      "title": "Characters & appearance",
+      "group": "Game systems",
+      "description": "Spawn NPCs, change player models and register custom clothing.",
+      "pages": [
+        {
+          "slug": "npcs",
+          "kind": "guide",
+          "nav": "NPC spawning",
+          "description": "Spawn Character records directly; manage streaming, authority, tasks, health and replicated behavior."
+        },
+        {
+          "slug": "character-previews",
+          "kind": "guide",
+          "nav": "Character previews",
+          "description": "Create local selection mannequins and networked NPCs with saved player faces, skin and clothing."
+        },
+        {
+          "slug": "npc-behavior",
+          "kind": "guide",
+          "nav": "NPC AI & voice control",
+          "description": "Control AI, combat, perception and voice lines per NPC with authoritative server Lua APIs."
+        },
+        {
+          "slug": "population",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "World population",
+          "title": "World population: pedestrians and traffic",
+          "description": "How the seated pedestrians, the walking crowd and ambient traffic are built, every setting that tunes them (convars, tunables, server NPC limits), runtime commands, and ready-made profiles from off to high population."
+        },
+        {
+          "slug": "npc-catalogue",
+          "kind": "guide",
+          "nav": "NPC catalogue",
+          "description": "Search 6,582 Character records, copy spawn IDs and inspect appearances and compatibility warnings."
+        },
+        {
+          "slug": "player-models",
+          "kind": "guide",
+          "nav": "Player morphs",
+          "description": "Server-owned NPC impersonation, readiness, replication, restoration and model compatibility."
+        },
+        {
+          "slug": "player-model-catalogue",
+          "kind": "guide",
+          "nav": "Player model catalogue",
+          "description": "Search all 6,582 Character records for player morphs, with downloadable IDs and the admin menu workflow."
+        },
+        {
+          "slug": "custom-clothing",
+          "kind": "guide",
+          "nav": "Custom clothing",
+          "description": "Register custom clothing on client and server, package native assets, browse and equip records, and preserve outfits through saves and resource reloads."
+        },
+        {
+          "slug": "layered-outfits",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Layered outfits",
+          "title": "Layered outfits",
+          "description": "Wear up to 54 Equipment-EX compatible clothing layers over the base slots, saved with the character and replicated in multiplayer: the fitting room LAYERS tab, server exports and convars, Open77.layers, events and Equipment-EX mods."
+        }
+      ]
+    },
+    {
+      "id": "player-body",
+      "title": "Player body & creator",
+      "group": "Game systems",
+      "description": "Change the player's body type at run time and build your own character creator on the game's catalogue.",
+      "pages": [
+        {
+          "slug": "runtime-body",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Body type at run time",
+          "title": "Changing body type at run time",
+          "description": "Switch the local player between a male and a female body without reloading a save: stats, inventory, worn clothing and weapons follow, other players see it in place."
+        },
+        {
+          "slug": "character-creator",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Character creator",
+          "title": "Building a character creator",
+          "description": "Read the game's character-creator catalogue from Lua, turn choices into a body and back, apply looks live, and save them on the server with open77_appearance."
+        },
+        {
+          "slug": "runtime-character-creation",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Creation in the world",
+          "title": "Character creation in the world",
+          "description": "Spawn new players in the world instead of the vanilla creator and let them build a persistent character with open77_creator, the NativeUI creator freeroam uses."
+        }
+      ]
+    },
+    {
+      "id": "animations",
+      "title": "Animations & roleplay",
+      "group": "Game systems",
+      "description": "Play animations, coordinate interactions and attach objects.",
+      "pages": [
+        {
+          "slug": "rp-animations",
+          "kind": "guide",
+          "nav": "Synchronized animations",
+          "description": "How synchronized role-play animations work: install the service, build your first Lua action, use the /anim menu, manage sequences and cancellation, and understand client/server authority and temporary third person."
+        },
+        {
+          "slug": "custom-locomotion",
+          "kind": "guide",
+          "nav": "Custom locomotion",
+          "description": "Register animation packages, assign movement styles, play and cancel one-shot clips, and tune smooth transitions and stride timing."
+        },
+        {
+          "slug": "rp-animation-catalogue",
+          "kind": "guide",
+          "nav": "Animation catalogue",
+          "description": "Browse 15 RP profiles and 73 exact clip variants, including giving, examination and wounded poses, with placement, rig bindings and experimental playback coverage."
+        },
+        {
+          "slug": "player-interactions",
+          "kind": "guide",
+          "nav": "Player interactions",
+          "description": "Coordinate giving, healing, carrying and escorting, plus experimental persistent player attachments. Covers server ownership, consent, lifecycle, revision checks and limits."
+        },
+        {
+          "slug": "attachments",
+          "kind": "guide",
+          "nav": "Synchronized attachments",
+          "description": "Attach props to player slots or vehicles with local position and rotation. Learn server authority, client rendering, bone discovery, revision-safe handoffs and lifecycle cleanup. Requires matching attachment-capable client/server builds and assets."
+        },
+        {
+          "slug": "animated-actions",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Animated actions",
+          "title": "Animated actions: a pose, a prop in the hands, a real duration",
+          "description": "Making a server-side job action look like something: a catalogue pose through Open77.animations, an object attached to a hand or the chest through Open77.props.attach, and a UI-kit progress bar for the time it takes. Workspot versus layer profiles, a carried crate with measured numbers and a live tuning command, a stationary repair with its cancel path, hand-sized prop aliases and the refusals to expect."
+        },
+        {
+          "slug": "rp-kit",
+          "kind": "guide",
+          "nav": "Roleplay utilities",
+          "description": "`open77_rp_basics`: cuff, escort and search composed from primitives that already shipped, how a hold always ends, and why `carry` refuses instead of faking a player-to-player attachment this engine does not have."
+        },
+        {
+          "slug": "holocall-eyes",
+          "kind": "guide",
+          "nav": "Blue holocall eyes",
+          "description": "Enable synchronized blue holocall eye glow with server-owned Lua leases, automatic cleanup, routing-bucket snapshots and local/F7 presentation."
+        }
+      ]
+    },
+    {
+      "id": "weapons",
+      "title": "Weapons & consumables",
+      "group": "Game systems",
+      "description": "Equip weapons, manage ammunition, grenades and healing charges, and customize native behavior.",
+      "pages": [
+        {
+          "slug": "weapons-api",
+          "kind": "guide",
+          "nav": "Weapons",
+          "description": "Weapon templates, slots, holstering and server assignments."
+        },
+        {
+          "slug": "dual-wielding",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Dual wielding",
+          "title": "Dual wielding",
+          "description": "Equip paired weapons with client and server Lua APIs, manage six loadout slots, read per-hand ammunition and reload state, and build a two-weapon HUD."
+        },
+        {
+          "slug": "consumables-api",
+          "kind": "guide",
+          "nav": "Grenades & healing",
+          "description": "Configure grenade, MaxDoc inhaler and Bounce Back injector charges, equipment and regeneration with client and server Lua APIs."
+        },
+        {
+          "slug": "weapon-customization",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Customization & workshop",
+          "title": "Weapon customization",
+          "description": "Tune weapon statistics and impact blasts, launch nearby vehicles and characters, and test with the English weapon workshop and native Lua APIs."
+        }
+      ]
+    },
+    {
+      "id": "cyberware",
+      "title": "Cyberware & abilities",
+      "group": "Game systems",
+      "description": "Manage loot, cyberware and multiplayer combat abilities.",
+      "pages": [
+        {
+          "slug": "loot",
+          "kind": "guide",
+          "nav": "Loot",
+          "description": "Authoritative ground drops: creating and projecting item drops, validating pickups, the onLootPickup hook, and where native UI ends and server authority begins."
+        },
+        {
+          "slug": "cyberware",
+          "kind": "guide",
+          "nav": "Cyberware overview",
+          "description": "Build multiplayer cyberware with server-owned implants, configurable grades, persistent installation, native presentation and permission-controlled Lua APIs."
+        },
+        {
+          "slug": "cyberware-customization",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Styles & colors",
+          "title": "Cyberware styles and colors",
+          "description": "Discover native cyberarm styles and palettes, apply two RGB colors, save and restore local customization, and understand ownership and multiplayer limits."
+        },
+        {
+          "slug": "gorilla-arms",
+          "kind": "guide",
+          "nav": "Gorilla Arms",
+          "description": "Add native Gorilla Arms to your server: normal and charged punches, synchronized knockback, configurable damage and cosmetics, plus Lua installation examples and optional doctor and arena resources."
+        },
+        {
+          "slug": "dash",
+          "kind": "guide",
+          "nav": "Dash / Air Dash",
+          "description": "Native ground and air dash as a server-owned session grant: definitions, charges, stamina and cooldown, one Air Dash per airtime, correlated `onDashChanged` / `onDashRejected` events, and the optional parkour example."
+        },
+        {
+          "slug": "ground-slam",
+          "kind": "guide",
+          "nav": "Ground Slam",
+          "description": "A native ground or mid-air slam as a session grant: define, grant and revoke, the key the player presses, the damage and radius options, impact events and the limits."
+        },
+        {
+          "slug": "reflex-overdrive",
+          "kind": "guide",
+          "nav": "Overdrive",
+          "title": "Overdrive: a Sandevistan-style boost for a shared world",
+          "description": "Grant a real-time reflex overdrive: the owner moves, swings and reloads faster while nobody else is slowed and no clock is touched. Definitions, tiers, presets, the observer presentation, the rebindable key and the release paths."
+        },
+        {
+          "slug": "hacking",
+          "kind": "guide",
+          "nav": "Hacking and counterplay",
+          "description": "Short Circuit, Overheat, Cyberware Malfunction, Cripple Movement, Reboot Optics and Weapon Glitch as kinds of one server-owned upload; Self-ICE, active purge, statuses, protection scopes and the `onHackingTransition` ledger."
+        },
+        {
+          "slug": "ability-activation-leases",
+          "kind": "guide",
+          "nav": "Activation leases",
+          "title": "Ability activation leases",
+          "description": "Why an ability activates the moment the key goes down: the server hands each player an expiring budget of activations, the client spends from it, and the server checks afterwards. Nothing to configure; what changes is when the waiting happens."
+        }
+      ]
+    },
+    {
+      "id": "vehicles",
+      "title": "Vehicles & driving",
+      "group": "Game systems",
+      "description": "Spawn vehicles, manage seats, automate driving, use mounted weapons and control passenger drive-by.",
+      "pages": [
+        {
+          "slug": "vehicles",
+          "kind": "guide",
+          "nav": "Vehicles",
+          "description": "Network vehicle identity, streaming, authority leases, seats and proxy replication, doors and glass, damage profiles, and the full asymmetric server and client Lua API."
+        },
+        {
+          "slug": "vehicle-sirens",
+          "kind": "guide",
+          "nav": "Sirens & key binding",
+          "description": "Install synchronized driver siren controls, configure the default key and integrate a client menu."
+        },
+        {
+          "slug": "vehicle-seat-switching",
+          "kind": "guide",
+          "nav": "Changing seats",
+          "description": "Animate front and rear seat changes, control automatic driver takeover, cancel requests and handle Lua client/server lifecycle events."
+        },
+        {
+          "slug": "vehicle-ai",
+          "kind": "guide",
+          "nav": "Autonomous vehicles & AI",
+          "description": "Server-owned autonomous driving, optional visible NPC drivers, reserved driver seats, routes, follow and chase, speed, behavior, lifecycle events and simulator handover."
+        },
+        {
+          "slug": "vehicle-weapons",
+          "kind": "guide",
+          "nav": "Armed vehicles & Lua API",
+          "description": "Mounted weapons in multiplayer: driver authority, shots and damage, supported models, protocol 1.24, current limitations and twelve read-only client Lua APIs for weapon selection, ammo, heat and turret aim."
+        },
+        {
+          "slug": "drive-by",
+          "kind": "guide",
+          "nav": "Passenger drive-by",
+          "description": "Enable or restrict passenger window combat, read its phases and seat, and combine client/server Lua policies with automatic window and cabin protection."
+        },
+        {
+          "slug": "armed-vehicles",
+          "kind": "guide",
+          "nav": "Armed vehicle catalogue",
+          "description": "Exact spawn IDs for 172 vehicle records declaring weapon mounts, with live-tested Basilisk, Outlaw and Shion variants, mount profiles, spawn examples and the machine-readable catalogue."
+        }
+      ]
+    },
+    {
+      "id": "vehicle-customization",
+      "title": "Vehicle customization",
+      "group": "Game systems",
+      "description": "Paint, liveries, neon, lamp colours, rims and body parts, plate, tint, stages, engine sounds and stickers: the server natives, the content packs that carry them and the models they cover.",
+      "pages": [
+        {
+          "slug": "vehicle-customization",
+          "kind": "guide",
+          "nav": "Overview",
+          "title": "Vehicle customization",
+          "description": "Tune networked cars from the server: liveries, neon, lamp colours, rims and body parts, plate, tint, stages, engine sounds and stickers. Categories, permissions and how the look reaches every player. Ships with the next Open77 release."
+        },
+        {
+          "slug": "vehicle-customization-natives",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Natives by category",
+          "title": "Vehicle customization natives",
+          "description": "Every vehicle customization native by category: arguments, results, refusal reasons, permissions and limits, server and client."
+        },
+        {
+          "slug": "vehicle-paint",
+          "kind": "guide",
+          "nav": "Paint & lights hue",
+          "description": "Server-controlled RGB paint, replication and change events."
+        },
+        {
+          "slug": "vehicle-customization-packs",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Content packs",
+          "title": "Vehicle customization content packs",
+          "description": "What a rim, livery, sticker, stage, sound, plate or tint pack holds, how it reaches players, the vehicle kit pipeline, fit tables and the 12-decal cap."
+        },
+        {
+          "slug": "vehicle-customization-models",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Model coverage",
+          "title": "Vehicle customization model coverage",
+          "description": "Why coverage is data, one fit per record, what happens on a model a pack does not cover, and how a server covers more models."
+        },
+        {
+          "slug": "vehicle-customization-persistence",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Persistence & multiplayer",
+          "title": "Vehicle customization: persistence and multiplayer",
+          "description": "The per-car visual value, late joiners and dormant choices, keeping a tuned car across a restart, events and the measured limits."
+        },
+        {
+          "slug": "vehicle-customization-fivem",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "FiveM equivalents",
+          "title": "Vehicle customization: FiveM equivalents",
+          "description": "SetVehicleMod, SetVehicleLivery, neon, window tint and plate: the FiveM aliases, their index mappings and the natives with another shape."
+        },
+        {
+          "slug": "vehicle-customization-examples",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Worked examples",
+          "title": "Vehicle customization worked examples",
+          "description": "A tuning shop, neon with refusals, a stage and sound bench, a garage that keeps tuned cars, a client menu, and Light RP's Auto Studio."
+        }
+      ]
+    },
+    {
+      "id": "world",
+      "title": "World & props",
+      "group": "Game systems",
+      "description": "Control weather, time, doors, elevators, objects and visual effects.",
+      "pages": [
+        {
+          "slug": "weather",
+          "kind": "guide",
+          "nav": "Time and weather",
+          "description": "Synchronised session time and weather: the network model, shared configuration, ACL-gated commands, random weather events, and the server and client APIs."
+        },
+        {
+          "slug": "world-time",
+          "kind": "guide",
+          "nav": "Time scale",
+          "description": "Slow motion for a scripted beat: Open77.world.setTimeScale on the client as a claim the dilation guard stands down for, per routing bucket from the server, how to measure it against the world clock, every release path, and why it is presentation and not a Sandevistan."
+        },
+        {
+          "slug": "doors",
+          "kind": "guide",
+          "nav": "Networked doors",
+          "description": "Server-owned automatic and interactive doors: dynamic discovery, native animations, elevator landing safety, routing buckets, access rules and client/server Lua exports."
+        },
+        {
+          "slug": "elevators",
+          "kind": "guide",
+          "nav": "Elevators",
+          "description": "Server-authoritative native lifts: adopting a LiftDevice, bucket and chunk streaming, movement and pause control, late-join catch-up, and the reference resource commands."
+        },
+        {
+          "slug": "props",
+          "kind": "guide",
+          "nav": "World props",
+          "description": "Server-owned world props and lights: creation, streaming and cleanup."
+        },
+        {
+          "slug": "gizmos",
+          "kind": "guide",
+          "nav": "Entity gizmos",
+          "title": "Entity gizmos",
+          "description": "Build native 3D placement editors with Open77.gizmos: Lua functions, target capabilities, snapping, undo/redo, lifecycle events, safe restoration and server-authorized edits. Development-build feature with documented validation limits."
+        },
+        {
+          "slug": "props-and-effects",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Props and effects",
+          "title": "Props and effects",
+          "description": "Placing server-owned objects, lights and replicated effects from Lua: the create definition, the curated model catalogue, the bucket and ground-height traps that make a prop invisible, lights and what respawns them, carrying, quotas and removal reasons, with the admin commands and two worked scenes."
+        },
+        {
+          "slug": "effects",
+          "kind": "guide",
+          "nav": "Visual and audio effects",
+          "description": "Resource-owned world and entity visual effects plus spatialised sound effects, with inspection, cleanup and the curated alias catalogues."
+        },
+        {
+          "slug": "sky-advertising",
+          "kind": "guide",
+          "nav": "Sky advertisements",
+          "description": "Create and preload custom sky hologram advertisements."
+        }
+      ]
+    },
+    {
+      "id": "map",
+      "title": "Map, markers & GPS",
+      "group": "Game systems",
+      "description": "Customize or replace the city map, add blips, pins and world markers, and guide players with waypoints and GPS.",
+      "pages": [
+        {
+          "slug": "native-map",
+          "kind": "guide",
+          "nav": "Native map & custom tabs",
+          "description": "Customize the native map title, accent and resource WebUI tabs with Lua and JavaScript lifecycle events. Control map views, read player waypoints and pick destinations without fast travel."
+        },
+        {
+          "slug": "map-providers",
+          "kind": "guide",
+          "nav": "Pause menu city map",
+          "description": "Make the pause menu's CITY MAP open your own map: register as a map provider, answer show requests within 1.5 seconds, priorities, the fallback to the game's map and client requirements."
+        },
+        {
+          "slug": "map3d",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "3D city map & GPS",
+          "title": "3D city map, minimap and GPS",
+          "description": "Install and configure the 3D city map that replaces the game's map and minimap: theme, blips for client and server, waypoint and GPS route events, map jamming, the pause menu entry and performance settings."
+        },
+        {
+          "slug": "blips",
+          "kind": "guide",
+          "nav": "Blips and map pins",
+          "description": "Native map pins, custom SVG icons and per-blip colors, entity attachment, GPS tracking, distance gates and the complete sprite catalogue."
+        },
+        {
+          "slug": "custom-blip-icons",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Custom SVG blips",
+          "description": "Create resource-owned SVG map icons, change colors and transparency from Lua, preserve native tracking, and handle format limits and errors."
+        },
+        {
+          "slug": "markers",
+          "kind": "guide",
+          "nav": "3D world markers",
+          "description": "Eight native mesh shapes, RGBA colors, dimensions and rotation. Lua creation, updates, loading diagnostics, resource ownership and cleanup."
+        }
+      ]
+    },
+    {
+      "id": "world-zones",
+      "title": "World drawing & zones",
+      "group": "Game systems",
+      "description": "Draw points of interest in the world and query locations, areas and zones.",
+      "pages": [
+        {
+          "slug": "world-drawing",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Drawing in the world",
+          "title": "Drawing in the world",
+          "description": "Every way a Lua resource puts something at a point in Night City: native ground markers, per-frame world anchors and the native card, ring and dot overlays, the marker-plus-prompt POI facade, proximity zones and nameplates — with lifecycle and cleanup for each."
+        },
+        {
+          "slug": "worldui",
+          "kind": "guide",
+          "nav": "World-anchored POIs",
+          "description": "The open77_worldui facade: a ground marker and its interaction prompt created and destroyed as one owned handle, the definition reference, and the invisible-ring trap it exists to avoid."
+        },
+        {
+          "slug": "world-queries",
+          "kind": "guide",
+          "nav": "World queries",
+          "description": "Query native rays, collision groups, Burning status, nearby entities, ground height and entity transforms."
+        },
+        {
+          "slug": "zones",
+          "kind": "guide",
+          "nav": "Proximity zones",
+          "description": "The open77_zones service: enter and exit events with hysteresis, the definition reference, the polling model and quotas, and why every containment rule must still be re-derived on the server."
+        },
+        {
+          "slug": "polyzone",
+          "kind": "guide",
+          "nav": "PolyZone",
+          "description": "Polygons, boxes, circles and spheres, entity zones and groups: containment queries, entry and exit callbacks, and the in-game zone editor with native debug drawing."
+        }
+      ]
+    },
+    {
+      "id": "targeting",
+      "title": "Targeting & interactions",
+      "group": "Game systems",
+      "description": "Pick screen targets and build context menus or native interaction prompts.",
+      "pages": [
+        {
+          "slug": "screen-picking",
+          "kind": "guide",
+          "nav": "Screen picking",
+          "description": "`Open77.camera.screenRay`, `screenRaycast` and `Open77.input.cursor`: resolve the entity under a screen point through the native physics owner, with the identity kinds a client can and cannot promise."
+        },
+        {
+          "slug": "context-menu",
+          "kind": "guide",
+          "nav": "Context menu",
+          "description": "The bundled ALT context menu: opt-in targeting of players, vehicles, doors, time and weather with resource-registered actions, the weapon-wheel claim it holds, and the exports a gamemode composes it from."
+        },
+        {
+          "slug": "interactions",
+          "kind": "guide",
+          "nav": "Contextual interactions",
+          "description": "Custom world and NPC prompts: attaching interactions to players or NPCs, multiple actions and hold keys, the definition reference, and keeping server authority intact."
+        },
+        {
+          "slug": "device-interactions",
+          "kind": "guide",
+          "nav": "Vanilla device prompts",
+          "description": "Take the vanilla prompt off a vending machine, ATM, terminal or door panel and put your own shop there: naming a device, ownership, the `open77:deviceUsed` event and every refusal reason."
+        },
+        {
+          "slug": "quickhack",
+          "kind": "guide",
+          "nav": "Quickhacks",
+          "description": "The game's scanner and quickhack interface for your server: players, NPCs and vehicles as targets, quickhacks, decks and RAM, server-checked uploads, report cards, bundled Ping examples, hooks, events and the game's sounds."
+        },
+        {
+          "slug": "quickhack-examples",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Quickhack examples",
+          "title": "Quickhack examples and ideas",
+          "description": "Start from the bundled Ping quickhacks (player, NPC, vehicle, device), then complete resources to copy: a PvP netrunner class, a heist door breach, mission NPCs, a police ID scanner, safe-zone rules and a RAM economy."
+        }
+      ]
+    },
+    {
+      "id": "world-interaction",
+      "title": "Jobs & world interaction",
+      "group": "Game systems",
+      "description": "Add jobs and social activities to your server: workstations, shared animations, carrying, storage, payments and seating.",
+      "pages": [
+        {
+          "slug": "world-interaction",
+          "kind": "guide",
+          "nav": "Overview & setup",
+          "description": "Choose and enable job resources, customize the salvage and street-food examples, and understand which world interactions are supported."
+        },
+        {
+          "slug": "build-a-job",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Build your first job",
+          "title": "Build your first Lua job",
+          "description": "Create a repair activity in Lua: place a work spot, choose an animation, require a part, pay the worker and handle cancellation."
+        },
+        {
+          "slug": "actions",
+          "kind": "guide",
+          "nav": "Actions & carrying",
+          "description": "Lua reference for timed actions, work spots, eligibility, hooks and carrying. Connect your job rules to prompts, animations and progress bars."
+        },
+        {
+          "slug": "transactions",
+          "kind": "guide",
+          "nav": "Items, payments & storage",
+          "description": "Connect inventories and wallets, save recipes and sales as one operation, handle payment retries and create persistent world containers."
+        },
+        {
+          "slug": "furniture",
+          "kind": "guide",
+          "nav": "Sitting & leaning",
+          "description": "Enable seating on supported city furniture, check your venue's seats and approaches, and call seating from your own Lua resources."
+        }
+      ]
+    },
+    {
+      "id": "rp-jobs",
+      "title": "Roleplay jobs",
+      "group": "Game systems",
+      "description": "Ready-made Night City jobs for roleplay servers: how each one plays, and how to set it up on your server.",
+      "pages": [
+        {
+          "slug": "rp-jobs",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Overview",
+          "title": "Roleplay jobs",
+          "description": "Seven ready-made Night City jobs for a roleplay server: what each one plays like, how they connect, the setup steps they share, the settings to run them all on one server and the platform features they rely on."
+        },
+        {
+          "slug": "rp-job-ripperdoc",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Ripperdoc",
+          "title": "Ripperdoc: Viktor's clinic",
+          "description": "Run a ripperdoc at Viktor's clinic: quotes the patient accepts on an offer card, the operating chair, real cyberware installed and paid once, what happens on a cancel or a restart, chrome from the Kabuki dealer, server setup, configuration and console commands."
+        },
+        {
+          "slug": "rp-job-chooh2",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "CHOOH2 chain",
+          "title": "CHOOH2: from the corn rows to the fuel depot",
+          "description": "Run the CHOOH2 fuel chain: harvest Biotechnica corn into crates, truck them to the Petrochem refinery in the North Sunrise Oil Field, ferment canisters, sell them at the depot or refuel a car, with server setup, configuration and console commands."
+        },
+        {
+          "slug": "rp-job-techie",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Techie",
+          "title": "Techie: the Kabuki west workshop",
+          "description": "Run a techie workshop in Kabuki: buy salvage from a dealer or a scrapper, strip it and assemble weapon mods and cyberware components at two benches sharing a tray, sell to Wilson, Dr. Osei or players with consent, every stage paid and created once, server setup, mint rules, configuration and console commands."
+        },
+        {
+          "slug": "rp-job-netrunner",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Netrunner",
+          "title": "Netrunner: breach contracts from the Afterlife",
+          "description": "Run netrunner contracts from the Afterlife's back room: fixers post breach contracts on a board, a netrunner breaches a real terminal against the clock, a failure is traced by NCPD, the data shard is paid once on delivery with the fixer's cut, plus quickhacks, server setup, configuration and console commands."
+        },
+        {
+          "slug": "rp-job-fixer",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Fixer board",
+          "title": "Fixer: the contract board",
+          "description": "Run the fixers' contract board at the Afterlife, Wakako's and Regina's corner: deliveries, retrievals, job orders and cyberpsycho bounties with escrowed rewards, reputation tiers, payouts and refunds made once, what survives a restart, server setup, configuration and console commands."
+        },
+        {
+          "slug": "rp-job-trauma-team",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Trauma Team",
+          "title": "Trauma Team: plans, calls and evacuations",
+          "description": "Run Trauma Team International: Silver, Gold and Platinum plans sold at kiosks, downed players held where they fell and a call raised with their plan's priority, medics who fly the AV out, stabilise and evacuate to Vik's clinic, every charge paid once, what survives a disconnect or a restart, server setup, configuration and console commands."
+        },
+        {
+          "slug": "rp-job-nomad",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Nomad smuggler",
+          "title": "Nomad smuggler: Aldecaldos runs",
+          "description": "Run Aldecaldos smuggling runs: take a run at the camp's board, carry crates into a truck bed, get past the NCPD checkpoints and hand the crates to a fence or a player, paid once with the camp's cut, plus officer searches, what survives a restart, server setup, configuration and console commands."
+        }
+      ]
+    },
+    {
+      "id": "interfaces",
+      "title": "WebUI & HUD",
+      "group": "Game systems",
+      "description": "Build menus and notifications, share resource assets and manage the HUD.",
+      "pages": [
+        {
+          "slug": "pause-menu",
+          "kind": "guide",
+          "nav": "Pause menu branding",
+          "title": "Pause menu customization",
+          "description": "Customize the OPEN//77 Escape menu with a Lua accent color and a server logo beside OPEN//77. Manifest setup, local assets, image URLs, permissions and resource cleanup."
+        },
+        {
+          "slug": "loading-screens",
+          "kind": "guide",
+          "nav": "Custom loading screens",
+          "description": "Detect native loading cycles, display a branded WebUI with progress, and hide or restore HUDs during teleport loads."
+        },
+        {
+          "slug": "ui-kit",
+          "kind": "guide",
+          "nav": "The UI kit",
+          "description": "`open77_uikit`: progress bars, text hints, alerts, input forms, context and keyboard menus and a radial wheel drawn from one page — with the focus rule that outranks the whole feature list."
+        },
+        {
+          "slug": "webui-assets",
+          "kind": "guide",
+          "nav": "Shared WebUI assets",
+          "title": "Shared WebUI assets with open77://",
+          "description": "Share images, CSS, JavaScript, fonts and data between resource interfaces with open77://. Provider and consumer manifests, URL rules, caching, limits and troubleshooting."
+        },
+        {
+          "slug": "webui-budget",
+          "kind": "guide",
+          "nav": "WebUI budget",
+          "title": "WebUI budget and performance",
+          "description": "What one WebUI page costs at each resolution, the 24-per-resource limit, the 32 pages a server's resources share and the separate pool for built-in pages, reading a `webui_surface_quota` refusal, `WebUI.budget()`, and keeping a big server inside the budget."
+        },
+        {
+          "slug": "notifications",
+          "kind": "guide",
+          "nav": "Notifications",
+          "description": "Reusable WebUI toasts: local client notifications, server-targeted delivery, updating and dismissing, queue limits, positions and progress."
+        },
+        {
+          "slug": "hud-visibility",
+          "kind": "guide",
+          "nav": "HUD visibility",
+          "description": "Show and hide native HUD components, or mask the HUD, watermark and nonfocused resource interfaces with cinematic letterbox bars. Resource-owned claims, cleanup and native notifications."
+        },
+        {
+          "slug": "world-screens",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "World screens",
+          "title": "World screens",
+          "description": "Put a WebUI page or a NativeUI document on any mesh as its real material: a television with YouTube and 3D sound, monitors, billboards. Open77.screens, attaching to props and entities, and the scripted-camera mode to click on it."
+        }
+      ]
+    },
+    {
+      "id": "nativeui",
+      "title": "NativeUI",
+      "group": "Game systems",
+      "description": "GPU interfaces drawn in the game's frame: RML documents driven from Lua, motion, effects, 3D HUDs and 3D scenes.",
+      "pages": [
+        {
+          "slug": "native-ui",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "NativeUI overview",
+          "title": "NativeUI",
+          "description": "Draw HUDs and menus on the game's own GPU with RML, RCSS and Lua: when to choose it over WebUI, requirements, a first HUD resource, layers, lifecycle, errors and developer tools."
+        },
+        {
+          "slug": "native-ui-documents",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Documents, data & events",
+          "title": "NativeUI documents, data and events",
+          "description": "Every Open77.ui call: create options, data models and bindings, model and DOM events, changing the document, reading layout, keyboard and mouse focus, images and fonts."
+        },
+        {
+          "slug": "native-ui-rml",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "RML & RCSS for web devs",
+          "title": "RML and RCSS for web developers",
+          "description": "What differs from HTML and CSS in NativeUI documents: the body is the document, dp units, flexbox pitfalls, events, styles, assets, large lists and debugging."
+        },
+        {
+          "slug": "native-ui-motion",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Motion",
+          "title": "NativeUI motion",
+          "description": "Native springs and tweens with ui:animate, keyframes, presets and easings, exit animations and automatic layout transitions."
+        },
+        {
+          "slug": "native-ui-effects",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Effects, shapes & themes",
+          "title": "NativeUI effects, shapes and themes",
+          "description": "The built-in Open77 design system, GPU filters, animated fx() decorators, custom HLSL effects, vector paths and shapes, runtime themes and fonts."
+        },
+        {
+          "slug": "native-ui-3d",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "3D HUDs",
+          "title": "NativeUI 3D HUDs",
+          "description": "Tilt a whole document in perspective with projection, float a HUD with the camera, and angle single panels with RCSS 3D transforms."
+        },
+        {
+          "slug": "native-ui-scenes",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "3D scenes & minimaps",
+          "title": "NativeUI 3D scenes and minimaps",
+          "description": "scene3d viewports: meshes, instanced markers, lines, views and cameras, object styles, draped areas and zones, road routes and anchored markers."
+        },
+        {
+          "slug": "native-ui-recipes",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Recipes",
+          "title": "NativeUI recipes",
+          "description": "Complete NativeUI examples: a keyboard and mouse menu, notification toasts, a keyboard-only composer, a server-driven scoreboard and a recolourable theme."
+        },
+        {
+          "slug": "preflight-screens",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Preflight screens (Lite)",
+          "title": "Building preflight screens",
+          "description": "NativeUI Lite, the RML and RCSS subset the OPEN//77 launcher renders before the game starts: elements, styles, design tokens, data binding, events, inputs, images, limits, layout tips and a complete welcome and rules example."
+        }
+      ]
+    },
+    {
+      "id": "input",
+      "title": "Input & controls",
+      "group": "Game systems",
+      "description": "Capture WebUI keys, register bindings, manage player input and use the clipboard.",
+      "pages": [
+        {
+          "slug": "webui-input",
+          "kind": "guide",
+          "nav": "WebUI keyboard input",
+          "description": "Capture Escape and navigation keys in a WebUI while keeping movement and mouse look active. Supported keys, permissions, errors and focus cleanup."
+        },
+        {
+          "slug": "webui-cursor",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "WebUI cursor",
+          "title": "WebUI cursor",
+          "description": "Hide the Open77 cursor and draw your own in a page, follow the page's CSS cursor or force a shape, read and move the pointer: page:setCursor, Open77.cursor, window.Open77.cursor and held-key release."
+        },
+        {
+          "slug": "keybindings",
+          "kind": "guide",
+          "nav": "Key bindings",
+          "description": "Register and rebind keyboard, mouse, wheel and gamepad actions, optionally consume native input, and read devices directly."
+        },
+        {
+          "slug": "input-blocking",
+          "kind": "guide",
+          "nav": "Blocking player input",
+          "description": "Take a named input away from the player and give it back — per-action blocks or the whole control stream — with the ownership and release rules that stop a crashed resource stranding somebody."
+        },
+        {
+          "slug": "clipboard",
+          "kind": "guide",
+          "nav": "Clipboard",
+          "description": "The write-only client clipboard API, the clipboard.write permission, failure reasons, and the built-in /pos and /rot transform commands."
+        }
+      ]
+    },
+    {
+      "id": "cameras",
+      "title": "Cameras & cinematics",
+      "group": "Game systems",
+      "description": "Control first- and third-person views, transitions and image capture.",
+      "pages": [
+        {
+          "slug": "perspective",
+          "kind": "guide",
+          "nav": "First and third person",
+          "description": "Player preferences, server policy and camera ownership."
+        },
+        {
+          "slug": "cameras",
+          "kind": "guide",
+          "nav": "Scripted cameras",
+          "description": "Put the view where your resource wants it: create, place, follow, look at and shake a camera, spectate a player from the server, and the release rules that guarantee the player gets their own view back."
+        },
+        {
+          "slug": "third-person-camera",
+          "kind": "guide",
+          "nav": "Third-person camera styles",
+          "description": "Client-side customization of the playable F7 camera: classic or over-the-shoulder framing, custom pivots, movement FOV and temporary shake; not a scripted camera."
+        },
+        {
+          "slug": "remote-camera",
+          "kind": "guide",
+          "nav": "Remote cameras & screens",
+          "description": "Independent render cameras: client Lua API, server access and streaming, HUD/WebUI feeds, world screens, placement editor and experimental limits."
+        },
+        {
+          "slug": "screen-transitions",
+          "kind": "guide",
+          "nav": "Native fades & transitions",
+          "description": "Use Cyberpunk's native screen fades from client Lua: fade out, hold and return, color options, completion events, resource ownership and automatic recovery. Includes server-coordinated transitions and HUD limitations."
+        },
+        {
+          "slug": "braindance",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Braindance",
+          "title": "Braindance",
+          "description": "The braindance launch as a scriptable sequence (white-out flash, black screen to hide a teleport or a set change, the braindance look, events for every phase) and the VISUAL, THERMAL and AUDIO vision layers with a native heatmap of every body around the player: open77_braindance exports and Open77.braindance."
+        },
+        {
+          "slug": "photo-mode",
+          "kind": "guide",
+          "nav": "Photo mode",
+          "description": "Control photo mode from a client resource, with exclusive ownership and cleanup."
+        },
+        {
+          "slug": "screenshots",
+          "kind": "guide",
+          "nav": "Screenshots and mugshots",
+          "description": "In-process captures of the game's own frame, the upload to a URL, the server-requested picture a client delivers, and the scripted-camera mugshot: what is captured, the surface formats, the in-flight rule, and where the picture goes."
+        }
+      ]
+    },
+    {
+      "id": "audio",
+      "title": "Audio & communication",
+      "group": "Game systems",
+      "description": "Play package audio and resource sounds, and use text chat.",
+      "pages": [
+        {
+          "slug": "package-audio",
+          "kind": "guide",
+          "nav": "Package audio: 2D & 3D",
+          "description": "Play package MP3/WAV assets locally or through server-owned network sounds. Control playback, pause, seek, volume and position with resource-owned handles, routing buckets and late-join timelines."
+        },
+        {
+          "slug": "sound",
+          "kind": "guide",
+          "nav": "Resource audio",
+          "description": "`open77_sound` plays an audio file your resource ships: spatial behaviour, server twins, ownership and lifetime, why files are never shared across resources, and how it differs from the game's own `Open77.sfx` events."
+        },
+        {
+          "slug": "chat",
+          "kind": "guide",
+          "nav": "Chat",
+          "description": "Chat messages, slash commands, completion, and the built-in developer commands available to every player."
+        }
+      ]
+    },
+    {
+      "id": "voice",
+      "title": "Voice",
+      "group": "Game systems",
+      "description": "Proximity voice, radio and phone channels, the audio graph, voice effects and presets, client controls and lipsync.",
+      "pages": [
+        {
+          "slug": "voice",
+          "kind": "guide",
+          "nav": "Voice chat overview",
+          "description": "Native proximity voice with acoustics, server configuration, the open77_voice and open-voice packages, reliability, bandwidth and diagnostics."
+        },
+        {
+          "slug": "voice-channels",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Radio & phone channels",
+          "title": "Voice channels",
+          "description": "Server voice channels: radio, phone, party, admin and spatial modes, memberships and permissions, mutes, proximity control, global policy and ownership."
+        },
+        {
+          "slug": "voice-graph",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Audio graph",
+          "title": "Voice audio graph",
+          "description": "Loudspeakers, microphones, direct listeners and synchronised music from the server: anchors, connections and intents, file playback, acoustics, events and limits."
+        },
+        {
+          "slug": "voice-effects",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Effects & presets",
+          "title": "Voice effects and presets",
+          "description": "The 36-parameter voice effect rack and its 12 built-in presets, custom presets, per-listener effects, targets, composition order and ownership."
+        },
+        {
+          "slug": "voice-client",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Client voice API",
+          "title": "Client voice API",
+          "description": "Client voice controls: devices and gains, push-to-talk and voice activation, transmit intents, reach requests, talkers, events, local music and generated PCM."
+        },
+        {
+          "slug": "voice-recipes",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Voice recipes",
+          "title": "Voice recipes",
+          "description": "Complete server voice examples: radio frequencies, phone calls, a vehicle megaphone, a club with music and a DJ, an intercom, voice disguise and admin broadcasts."
+        },
+        {
+          "slug": "voice-lipsync",
+          "kind": "guide",
+          "nav": "Voice lipsync",
+          "description": "Enable voice-driven mouths on male/female player heads, locally and on replicated players, with resource-owned Lua controls and diagnostics."
+        },
+        {
+          "slug": "guided-voice-setup",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Guided voice setup",
+          "title": "Guided voice setup API",
+          "description": "Build optional microphone onboarding with device selection, a live meter, local playback, keyboard and mouse push-to-talk bindings, and shared pause-menu preferences."
+        }
+      ]
+    },
+    {
+      "id": "assets",
+      "title": "Mods & game data",
+      "group": "Reference & tools",
+      "description": "Distribute custom assets and look up game records and constants.",
+      "pages": [
+        {
+          "slug": "mods",
+          "kind": "guide",
+          "nav": "Mods and custom assets",
+          "description": "Install and declare stack, world and personal mods."
+        },
+        {
+          "slug": "server-mods",
+          "kind": "guide",
+          "nav": "Required mods",
+          "title": "Mods your server requires",
+          "description": "Requiring a mod for your world: whether the content needs a mod at all or is really a Lua resource, the trust verdicts and the capability cap that lets unverified packages carry inert data only, importing from the Warden Mods tab, who hosts the bytes, requesting a review, bandwidth, and removing a mod without stranding players."
+        },
+        {
+          "slug": "data-reference",
+          "kind": "guide",
+          "nav": "Game data reference",
+          "description": "NPC templates, vehicle records, seat and door constants, items, weapons, effects, sounds, animations and sprite catalogues, with explicit support levels."
+        },
+        {
+          "slug": "data-catalogues",
+          "kind": "guide",
+          "nav": "Game data catalogues",
+          "description": "`Open77.data` turns a TweakDB record string into the facts a resource can show — display name, class, manufacturer, seats, quality — the fields each runtime can answer, and the one asymmetry on `npc`."
+        }
+      ]
+    },
+    {
+      "id": "reference",
+      "title": "API & developer tools",
+      "group": "Reference & tools",
+      "description": "Browse Lua contracts and use debugging and agent tooling.",
+      "pages": [
+        {
+          "slug": "api",
+          "kind": "page",
+          "nav": "API reference",
+          "title": "Lua API reference",
+          "description": "Searchable reference for every registered OPEN//77 Lua function, separated by runtime so a client projection is never mistaken for server authority."
+        },
+        {
+          "slug": "server-api",
+          "kind": "guide",
+          "nav": "Complete server Lua API",
+          "description": "Every dedicated-server global, Open77 namespace, permission, constant and result shape: scheduler, events, commands, players, combat, routing buckets, loot, vehicles, NPCs, elevators, database and logging."
+        },
+        {
+          "slug": "agents",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Build with an AI agent",
+          "title": "Build resources with an AI agent",
+          "description": "Install the OPEN//77 Devkit MCP in one line and give Claude Code, Codex, Cursor or VS Code every Lua native, permission, event and game-data name, pinned to the server build you run."
+        },
+        {
+          "slug": "rtti",
+          "kind": "guide",
+          "nav": "RTTI calls & hooks",
+          "title": "RTTI calls and hooks",
+          "description": "Call native and scripted game functions from Lua, obtain GameInstance and game systems, install hooks and manage reference lifetimes."
+        },
+        {
+          "slug": "rtti-testing",
+          "kind": "guide",
+          "source": "authored",
+          "nav": "Test RTTI in game",
+          "title": "Test RTTI calls in the running game",
+          "description": "Run the RTTI fixture with agent-play and the debug bridge, interpret results, check stop and reload cleanup, and test both client resource hosts through the server laboratory."
+        },
+        {
+          "slug": "debug-runtime",
+          "kind": "guide",
+          "nav": "Privileged debug runtime",
+          "description": "The ACL-gated in-game Lua laboratory: client execution, native lab commands, the REDscript bridge, and the limits that keep it out of gameplay code."
+        },
+        {
+          "slug": "agent-testing",
+          "kind": "guide",
+          "nav": "Autonomous agent testing",
+          "description": "The MCP server and Claude Code skill that let an AI agent test OPEN//77 in the running game: the tool list, the human-path connection, repeatable scenarios, installation, and the rules that keep a verdict honest."
+        }
+      ]
+    }
+  ]
+}

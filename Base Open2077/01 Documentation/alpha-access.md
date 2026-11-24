@@ -1,0 +1,92 @@
+# Open Alpha: play, host and build
+
+> Source officielle : [Markdown](https://open2077.net/docs/alpha-access.md) · [Page web](https://open2077.net/docs/alpha-access)
+
+OPEN//77 is in **Open Alpha**, available to everyone. Download the launcher to play, host your own server, or build a custom Cyberpunk 2077 gamemode with Lua and WebUI. No access application, invitation or staff approval is needed.
+
+Open Alpha is still an early release, not a stable release. Expect bugs, crashes, incomplete features and breaking API changes.
+
+## Get started
+
+1. [Download the launcher](https://open2077.net/download) and create or sign in to your free [OPEN//77 account](https://open2077.net/account).
+2. Let the launcher verify your game installation and install the multiplayer update.
+3. Choose a community server, or [download the dedicated server](https://open2077.net/host) to create your own.
+
+Both launcher and server downloads are public. You do not need to join Discord or request access before using them. The [official Discord](https://discord.gg/open77) is there for support, release updates and meeting other players and creators.
+
+A free account with a verified email can create [server license keys](https://open2077.net/account/keys).
+There is no developer role, project review or Alpha entitlement to obtain. A license
+identifies the server and its owner. Individual servers can still enforce their own
+admission rules, such as a password or community whitelist.
+
+## Install and connect
+
+Use the [official launcher download](https://open2077.net/download). Playing requires your own legal
+copy of **Cyberpunk 2077 2.5 with Phantom Liberty**, on 64-bit Windows 10 or 11.
+Let the launcher verify your installation and apply the current multiplayer update.
+
+Select a world in the [live server directory](https://open2077.net/servers), or use **Direct Connect**
+in the launcher with a hostname/IP and port. **History** keeps confirmed connections,
+including local development servers. Local/private addresses are hidden from the
+launcher's normal server list, not from History or Direct Connect.
+
+Direct Connect uses the same account authentication, connection tickets and server rules.
+An address absent from the master directory can have an unknown availability status;
+that is not proof that the server is offline.
+
+See [the launcher guide](launcher.md) for installation, updates and diagnostics.
+
+## Host your first server
+
+Download the current [Windows x64 or Linux x64 server package](https://open2077.net/host). Both include
+their .NET runtime, native dependencies, the Freeroam template and its system
+resources. Cyberpunk 2077 and a separate .NET installation are not required on the host.
+
+1. Extract into a new directory. Run `Start.cmd` on Windows or `./start.sh` on Linux.
+2. Complete the first-run Warden setup with your server name, visibility, public
+   game/resource endpoints and a [server license key](https://open2077.net/account/keys).
+3. Follow the [hosting guide](host-a-server.md) for network/firewall configuration.
+   Internet players must be able to reach both the game endpoint and resource downloads.
+4. Leave the master URL at **`https://master.open2077.net/`**. The loopback URL
+   printed for Warden is your local administration panel, not the master directory.
+
+The included Freeroam combines racing, PvP, wardrobe and an animation menu, with
+system packages such as chat, voice, weather and administration. You still need to
+configure your server and access rules; the download does not include a license or
+anyone else's player data.
+
+Use the official master-backed setup during Alpha. The private/offline startup
+path remains experimental; do not disable authentication to work around setup errors.
+For Linux service wrappers, use `SIGINT` for a graceful shutdown: `SIGTERM` shutdown
+of the game loop is a known limitation.
+
+## Build with Lua and WebUI
+
+Start with [server resources](server-resources.md), then use the
+[API reference](../02%20API%20Lua/Index%20API%20Lua.md) filtered by server/client runtime and category.
+Server and client runtimes support resource exports within their own side;
+cross-resource calls do not turn a client export into a server export.
+
+For character actions, read the [RP animation guide](rp-animations.md) and its
+linked client/server API entries. For a working gamemode example, browse the
+[Freeroam source](https://github.com/Open2077/open77-resources/tree/main/gamemodes/freeroam).
+
+## Alpha expectations
+
+- APIs, network protocols and resource formats may change. Back up configuration, persistent data and custom resources before updating.
+- Check each system's limitations, including supported models, bodies and animations.
+- Repeated reconnects can leave stale RP animation proxies or a camera hold. Restart the game and report reproduction steps if this occurs.
+- Capacity depends on hardware, resources and workload; no universal player-count target is guaranteed.
+- Launcher and client/server builds have separate version numbers. Use compatible releases from the official downloads.
+
+## Report a problem
+
+Use the [official Discord](https://discord.gg/open77) with your launcher and
+client/server versions, operating system, steps to reproduce, expected result and
+actual result. Mention whether it happens after reconnecting, with a specific body
+type, animation, vehicle or custom resource.
+
+Attach the relevant logs or launcher diagnostics when requested. Review files before
+sharing: never post license keys, passwords, account tokens or server identity/signing
+files. For a possible security issue, contact the maintainers privately instead of
+posting credentials or exploit details in a public channel.

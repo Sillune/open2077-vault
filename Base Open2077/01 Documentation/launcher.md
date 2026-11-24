@@ -1,0 +1,437 @@
+# The OPEN//77 launcher
+
+> Source officielle : [Markdown](https://open2077.net/docs/launcher.md) · [Page web](https://open2077.net/docs/launcher)
+
+Use the Windows launcher to locate Cyberpunk 2077, verify compatibility, sign in, install multiplayer files and connect to a server.
+
+The launcher checks the game build, required files and account identity before starting a multiplayer session.
+
+**Stable 148 (`2.50.0+op77.148`) supports Cyberpunk 2077 2.5.** Update the game, launcher and multiplayer client together. Server owners must also deploy the matching server and resources, with `simulation.expectedGameBuild` set to `25000`.
+
+**Launcher 149 (`2.50.0+op77.149`) restores the official directory and updates** for older settings left on Local development. Download it from [the download page](https://open2077.net/download), close the previous launcher and open the new file. On its first run, it switches those legacy settings to **Open//77 Alpha**, selects **Stable** and enables update checks. The multiplayer client and server remain on Stable 148.
+
+> **Play, host and build in Open Alpha.** The launcher, multiplayer updates and live
+> server directory are available to everyone. Server downloads are public, and no
+> access application or approval is needed. Read the [Open Alpha guide](alpha-access.md).
+
+## What you need
+
+| | |
+|---|---|
+| **Windows** | The launcher refuses to start anywhere else, and the client is a native Windows plugin |
+| **Microsoft Edge WebView2 Runtime** | The launcher's window is a web view. It ships with Windows 11 and installs itself on Windows 10 |
+| **Cyberpunk 2077, bought** | Your own legal copy. OPEN//77 distributes no part of the game |
+| **The exact game build** | Not a minimum — an equality. See [How the platform works](platform.md) |
+| **Phantom Liberty** | The expansion ships as EP1, and the world you load on connect is an EP1 save |
+| **An OPEN//77 account** | Created on the website; the launcher signs into it |
+
+If WebView2 is somehow missing, the launcher does not fail silently: it puts up a
+message naming the Microsoft Edge WebView2 Runtime and writes the underlying
+error to its log.
+
+## Installing it
+
+The launcher is published as a **single file**, `Open77Launcher.exe` — roughly
+63 MB, with the .NET runtime, the web view assemblies and its own interface
+assets bundled inside. There is no installer, no setup wizard and no
+uninstaller: you put the exe somewhere and run it. Everything it later creates
+lives under `%LOCALAPPDATA%\Open77` and inside your Cyberpunk 2077 folder.
+
+### Returning from local development
+
+For public servers and official updates, select **Open//77 Alpha** as the directory source in Settings, keep the **Stable** channel selected and enable update checks. Changing the directory source restarts the launcher.
+
+**Local development** connects to `127.0.0.1:8090` and deliberately skips client and launcher updates. It shows the local master's directory, not the official server list. If an older launcher is stuck in this mode, download launcher 149 manually: it cannot discover that update through the local master. Recovery runs once; later deliberate directory choices and explicit development endpoint overrides are preserved. A launcher does not offer its own version again; client updates are checked separately.
+
+Servers still configured for Cyberpunk 2.31 cannot accept the 2.5 client. Their operators must update the server before players can join.
+
+### Windows security warnings
+
+The launcher executable is unsigned. Check its Authenticode status with `Get-AuthenticodeSignature .\Open77Launcher.exe` in PowerShell. Windows may show an unknown-publisher warning. Download only from the official OPEN//77 website and verify the file's origin before choosing **More info → Run anyway**. Do not bypass a malware detection.
+
+Download integrity checks are separate from publisher signing: the launcher verifies the signed mod index and checks package and self-update hashes. It removes the downloaded-file mark from installed files after hash verification so that Windows does not block required mod libraries.
+
+## Finding your game
+
+You are not asked where Cyberpunk 2077 is unless the launcher genuinely cannot
+work it out. It looks, in this order:
+
+1. An explicit `--game-dir` on the command line.
+2. The `OP77_GAME_DIR` environment variable (the process environment, then your
+   user environment).
+3. **GOG**, from the registry — `HKLM\SOFTWARE\WOW6432Node\GOG.com\Games\1423049311`.
+4. **Steam**, from the registry, and then *every* Steam library: it reads Steam's
+   install path from `HKCU\Software\Valve\Steam` and the `HKLM` install keys, then
+   parses `steamapps\libraryfolders.vdf` to find your other drives. A game on a
+   second SSD is found.
+
+If none of that hits, you pick the folder yourself, and the picker is deliberately
+forgiving: it accepts the install root, `bin\x64`, the executable itself, a Steam
+library root, `steamapps`, `common`, or the parent of any of those, and falls back
+to a shallow search under whatever you chose.
+
+There is no registry probe for Epic, so an Epic installation is found by picking
+the folder. Locating files does not verify ownership; see the account-linking
+step below for supported stores and manual approval.
+
+## Checking the build
+
+The launcher computes the **SHA-256 of `bin\x64\Cyberpunk2077.exe`** and compares
+it with the master's build manifest. If your build is unknown, deprecated or
+revoked, it warns you.
+
+That warning is **advisory**. The launcher will not stop you, because the launcher
+is not the thing that enforces it — the real check happens when your client asks
+the platform for a ticket to join a server, and a wrong build is refused there.
+So a warning at the launcher is not a suggestion you can ignore; it is an early
+notice of a refusal that will come later, at a much more annoying moment.
+
+The practical cause is almost always the same: the game auto-updated. The
+platform targets one exact build, and a newer patch does not "mostly work" — the
+plugin compares the byte prologues of the engine functions it hooks and declines
+to load on a mismatch.
+
+## Signing in
+
+Two ways in, both handled entirely in the launcher's own code — the page inside
+the window never touches the network or your credentials.
+
+**Through your browser (the default).** The launcher opens your normal browser on
+the OPEN//77 website's [launcher authorisation page](https://open2077.net/launcher). You sign in
+there, on the site, exactly as you would to read your account page — **no password
+is ever typed into the launcher** — and the site hands back a one-time code to a
+loopback address on your own machine. The code is PKCE-bound (S256) to the
+launcher instance that started the flow, so a code intercepted in transit is
+useless to anything else, and the site refuses to redirect anywhere that is not a
+`127.0.0.1` / `localhost` callback. The launcher then exchanges the code for an
+account session.
+
+If the authorisation page ever tells you the link "points somewhere it shouldn't",
+that is this guard firing. Close it and start the sign-in from the launcher again.
+
+**Directly, with e-mail and password.** The launcher also offers a plain sign-in
+form that posts your credentials to the platform's login endpoint itself. It is
+the same account and produces the same session.
+
+Either way, the result is written to `launcher-session-v1.dat` under
+`%LOCALAPPDATA%\Open77`, encrypted with **DPAPI at CurrentUser scope** — so it is
+readable by your Windows user on that machine and nowhere else, and copying the
+file to another PC gets you nothing. The game plugin reads it at startup, which is
+how your account and display name reach the world you join without the game ever
+handling a password.
+
+## Linking your game once
+
+After the multiplayer update, the launcher offers to connect **Steam or GOG**
+if your Open77 account has not been verified yet. Linking is **optional for now**:
+choose **Skip for now** to browse and join servers without linking. Your choice
+is remembered, and you can link later in Settings.
+
+When you choose to verify, one store account must own both
+**Cyberpunk 2077 and Phantom Liberty**. Complete the verification once; your store
+ID and the result stay linked to your Open77 account.
+
+On later launches, you go directly to the server directory without repeating the
+store sign-in. You can view the linked Steam/GOG accounts in **Settings → Linked
+stores**. Normal Open77 account sign-in still applies.
+
+If your store is not supported yet, use **Skip for now**. Open77 support can also
+manually approve accounts; this approval is retained for when linking becomes
+mandatory. Skipping does not create a store ID or mark ownership as verified.
+Open Alpha itself requires no access application or approval.
+
+## The mod menu
+
+The mod menu is where you choose what loads with the game. You reach it from the
+cube in the title bar, from a **Mods** row in Settings, or as a secondary action
+on the READY screen.
+
+> **It is not switched on for everyone yet.** There are two ways an install can
+> be kept up to date: the older whole-payload updater, and the mod stack that
+> everything below describes. Which one runs is decided once per launch, and the
+> mod stack only takes over where the platform has published a signed mod index.
+> Until then the menu says so in as many words — *this install is managed by the
+> classic OPEN//77 updater, and the mod list becomes available once the platform
+> publishes a mod index* — and there is nothing to choose. The two never both
+> run: the old updater would silently reinstate every file the new one had
+> disabled.
+
+The rule that shapes everything else: **the page decides nothing.** Every
+question — what depends on what, what conflicts with what, what may not be
+switched off — is answered by the launcher itself, and a request the rules do not
+allow is *refused by name* rather than quietly bouncing back. A checkbox that
+springs back with no explanation is the single worst thing a mod menu can do, so
+every refusal carries a reason:
+
+| Reason | What it means |
+|---|---|
+| `mandatory` | This is part of the floor multiplayer needs. It cannot be off |
+| `required_by` | Something else that is on needs this — and it names what |
+| `conflict` | Two packages want the same file, and it names both sides |
+| `consent_required` | This one changes something you should agree to first, with the points to read |
+| `needs_file` | This package's archive has to be supplied before it can be enabled |
+| `game_running` | Cyberpunk 2077 is open. Files cannot be moved under a live game |
+| `blocked` | A rule refuses this one, with the reason and, when there is one, a link |
+
+### Mandatory and optional
+
+Four packages make up the floor and cannot be unticked:
+
+| Package | Why it cannot be off |
+|---|---|
+| `open77-core` | OPEN//77 itself: the client plugin, its archive and its scripts |
+| `open77-webui` | The in-game interface runtime — the server browser you are looking at is drawn by it |
+| `red4ext` | The loader that gets the plugin into the game process at all |
+| `redscript` | The script compiler the game runs at boot |
+
+Everything else is yours to choose. The stack carries third-party packages —
+Cyber Engine Tweaks, Cyber Vehicle Overhaul, and the CVOO overlay on top of it —
+each with its author, licence and upstream link recorded, none of them mandatory,
+and none of them enabled behind your back.
+
+A package can also be **consent-gated**: switched off by default and refused until
+you have read what it does and said yes. That exists for changes that outlive the
+session — a tweak that alters your singleplayer game and keeps altering it after
+you stop playing OPEN//77 is not something a checkbox should do silently. The
+first attempt to enable one returns the points to read; your acceptance comes back
+on the same action.
+
+Your consent is remembered separately from your on/off choices, on purpose: if
+the warning attached to a package later changes, you are asked again rather than
+inheriting an answer you gave to a different question.
+
+### Dependencies, conflicts and overrides
+
+Turning something on turns on what it needs. Turning something off is refused
+while something that needs it is still on, and the refusal names the dependant.
+
+Two enabled packages claiming the same file is normally a **hard refusal**, and it
+should be: a silent race for a path is how a mod set stops being reproducible.
+But some pairings are genuinely an overlay rather than a collision. CVOO ships 36
+of Cyber Vehicle Overhaul's 39 files, with different bytes, and ships no
+`init.lua` at all — it is not a replacement for CVO, it is a layer on top of one.
+
+So a package can **declare** what it overlays, which means exactly three things:
+
+- **It implies a dependency.** An overlay is not standalone, so what it overlays
+  is switched on with it — and unticking the package underneath is refused,
+  naming the overlay.
+- **It suppresses the shared-path conflict for that one declared pair.** Any
+  other two packages claiming a path is still refused. The rule is not weakened;
+  it is given one auditable exception.
+- **The winner is the overriding package, deterministically** — never "whichever
+  was written last".
+
+The rows show both ends of it: the overlay says what it overrides and how many
+files it took, and the package underneath says how many of its own files are
+currently somebody else's.
+
+### What happens when you untick something
+
+Nothing is deleted. The launcher keeps a **content store** under
+`%LOCALAPPDATA%\Open77\modstore`, addressed by content hash, and the copy of every
+file a package displaced stays in it.
+
+So switching an overlay off **restores the original copy of every path it had
+taken**, byte for byte. That promise is load-bearing enough that applying a change
+deliberately fetches the displaced copies even though it does not install them —
+because without that, undoing a checkbox could require a download, and for a
+package whose bytes you supplied yourself there would be no download to make.
+
+### Apply, and the compile that can refuse it
+
+**Apply** is the commit point, and it runs in three steps: work out the file set,
+compile the redscript, then write.
+
+The middle step is not a formality. Every `.reds` file in the game shares one
+compilation unit, so a single broken script anywhere makes the whole compile fail
+— and a failed compile silently reverts the game to its **vanilla scripts**. That
+drops OPEN//77's own bridge scripts with it, and multiplayer simply stops working,
+with no error you would ever see. You would get a game that starts, looks
+completely normal, and has no OPEN//77 in it.
+
+So the launcher compiles the set that would actually result — against a scratch
+copy, never your game folder — *before* moving a single file. If it does not
+compile, the whole apply is refused, the offending mod is named, the compiler's
+own errors are shown, and you are offered one click to switch that mod off and
+try again.
+
+**Apply is also refused while Cyberpunk 2077 is running**, including a session you
+started from somewhere else. Installing means deleting and relinking files a live
+game holds open.
+
+### Mods you installed yourself
+
+The launcher scans the eight folders Cyberpunk mods live in — `archive/pc/mod`,
+`r6/scripts`, `r6/tweaks`, `r6/input`, `red4ext/plugins`, `bin/x64/plugins`,
+`engine/tools`, and CET's own mods folder — and sorts what it finds into three
+kinds: **ours** (a package we installed), **contested** (a package claims that
+path but somebody else's bytes are there — never blind-overwritten), and
+**foreign** (yours).
+
+User-installed mods appear in a separate section with their location, size and any compatibility warning. Version, author and licence are omitted when that information is unavailable.
+
+Two kinds of rule can catch one, and the difference matters:
+
+- **Switched off by default.** The launcher turns it off the first time it sees
+  it, and *writes that decision down*. If you switch it back on, that answer
+  sticks and no rule turns it off again. Your game, your choice.
+- **Blocked.** Refused while OPEN//77 is installed, because it breaks or cheats.
+  This one is re-asserted every time, because it is a refusal rather than a
+  default.
+
+Switching one of your own mods off is a **move, never a delete**. Its files go
+into the content store, and they only leave your game folder *after* their bytes
+have been written to the store and re-read and re-hashed there. Restoring copies
+them back, hash-verified, with their original timestamps. There is a *restore my
+mods* action that hands every held file back, blocked ones included — and
+uninstalling OPEN//77 does the same thing.
+
+If you use Vortex or Mod Organizer 2, they will put a quarantined file back, and
+that is fine. The scan is hash-and-path driven and re-runs every time, so a
+restored file is simply seen again; a blocked one is held again and says so, and a
+default you already overruled is left alone. Nothing here overwrites a file
+another manager owns.
+
+## Browsing and joining a world
+
+The launcher's server browser is the *same interface as the game's own* — the same
+shell, the same list, the same connect panel — because it is literally the same
+web assets, driven by the launcher instead of by the game.
+
+The directory comes from the platform master, fetched by the launcher itself
+rather than by the page. Press connect on a world and the launcher starts
+Cyberpunk 2077 with your account session and a boot connect target, so the game
+comes up already joining that world instead of dropping you on the server browser.
+If a client is already running, it joins in place rather than launching a second
+one.
+
+The directory is live. Sign in with your OPEN//77 account to join; no Alpha approval is needed. If the list
+is empty, clear filters, refresh it and check the selected master and your connection.
+Local/private addresses are deliberately hidden from this list.
+
+### Server check
+
+Many servers ask a few questions before the game starts. After you press Join, the launcher's
+**Server check** step can show the server's own page: its rules to accept, a whitelist application
+form, a "server full" queue, or the reason you cannot join (a ban, maintenance, a Discord account
+to link). The page is written by the server, not by OPEN//77: never type your OPEN//77, Steam, GOG,
+Epic or Xbox password into it. A refusal offers **Retry** and **Back**; follow the server's
+instructions, then retry. Server owners: see [Connection preflight](connection-preflight.md).
+
+### History and Direct Connect
+
+**History** lists confirmed connections, most recent first, including localhost
+and private development servers. Entries show availability from the current
+directory when known; an unlisted raw address can remain **Unknown** rather than
+being declared offline. Failed connection attempts do not create history entries.
+
+Use **Direct Connect** in the launcher to enter `IP:port`, `hostname:port` or
+`[IPv6]:port`. It uses the normal connection flow, including authentication and
+any required mod/security confirmations. It is not an access bypass.
+
+## Direct connect links
+
+A link of this shape boots the game straight into a world:
+
+```text
+open77://connect?server=<serverId>
+```
+
+It is what the Join buttons on the OPEN//77 website emit and what the launcher's
+own rows use, so a link a server owner posts in their Discord behaves identically
+to one on this site.
+
+The launcher registers the `open77` scheme for your user account on every start —
+idempotently, so a broken registration heals itself — and clicking such a link:
+
+- opens the launcher if it is closed;
+- **hands the link to the launcher you already have open**, over a local pipe, and
+  brings that window to the front. You never get a second window;
+- **queues the target if you are not ready yet** — signed out, game unverified, or
+  mods still updating. You sign in, it finishes, and the connect fires on its own.
+  You do not have to click the link twice.
+
+A deep link is a shortcut through the launcher's interface, not through
+authentication: it drives exactly the same authenticated connect a manual click
+does. If anything fails, you land in the normal server browser with the error
+rather than on a hung screen.
+
+If you have no launcher installed, your browser shows its usual "no app for this
+link" prompt and nothing happens.
+
+## How it updates itself
+
+The launcher checks for a newer version of itself against the platform's build
+allowlist, and offers it as a banner. Applying it is deliberately two-phase, so a
+running program is never overwritten under its own feet:
+
+1. **Stage.** The new executable is downloaded, its **SHA-256 verified against the
+   allowlist entry**, and written *beside* the current one. Nothing running is
+   touched. A failed download or a hash that does not match leaves you exactly
+   where you were, with a message and a manual download link.
+2. **Swap.** The very first thing the launcher does on its *next* start is put the
+   staged executable in place and relaunch it. The old one is kept as a backup
+   until the swap is proven, and any failure falls through to simply starting the
+   version you already had.
+
+So a launcher update lands on a restart, exactly once, and cannot leave you with a
+half-written exe. The banner offers you that restart when a version is staged.
+There is a setting for whether it checks at all.
+
+The client mod is a separate thing on a separate cadence, checked at every start
+before you reach the READY screen, and offered as its own banner while you are
+using the launcher. Installing it is refused while the game is running.
+
+Where the mod stack is in use, the mod is fetched **per package and by content
+hash**, which is what makes a routine OPEN//77 update small. The client payload
+weighs about 410 MB, but roughly 384 MB of that is a browser runtime that only
+changes when that runtime is bumped. Because each package is fetched separately
+and addressed by its content, a plugin-only update moves on the order of **8 MB
+of blobs instead of the whole 410 MB**. Switching between the stable and beta
+channels is cheap for the same reason: only what actually differs is downloaded.
+
+## When something goes wrong
+
+**The log is at `%LOCALAPPDATA%\Open77\launcher.log`.** It is a plain text file,
+appended to, one timestamped line per event: sign-in, the directory fetch, the
+mod update, the launch, the world it was trying to connect you to, and any
+initialisation error. The window has no console, so this is the only place these
+end up. It is never rotated or trimmed, so it is also complete — attach it when
+you ask for help.
+
+There are a few command-line switches that answer questions faster than
+guesswork:
+
+```text
+Open77Launcher.exe --detect-only    locate and hash the game, print it, exit
+                                    (no window, no network)
+Open77Launcher.exe --console        the original one-pass console sign-in
+                                    and launch flow
+Open77Launcher.exe --mods           open straight on the mod menu
+Open77Launcher.exe --game-dir <dir> point it at a specific install
+```
+
+`--detect-only` is the one to reach for first: it tells you which install the
+launcher found and what it hashed to, without touching the network or your files.
+
+| Symptom | Where to look |
+|---|---|
+| "Windows protected your PC" on first run | Expected — the exe is unsigned. **More info → Run anyway**, and make sure you got it from the official site |
+| The window never appears | WebView2 Runtime. The launcher says so, and the log has the exception |
+| It cannot find your game | `--detect-only` to see what it tried, then pick the folder manually. Epic installs are not auto-detected |
+| A build warning you did not expect | The game auto-updated. The platform targets one exact build |
+| Apply is refused | Read the reason — it always gives one. `game_running` is the most common, and means exactly what it says |
+| "Another mod manager owns files OPEN//77 needs" | Vortex or MO2 has its own copy of a shared loader file — RED4ext's or redscript's. The launcher refuses to overwrite it rather than start a restore war. Let one manager own those files |
+| You were signed in yesterday and are signed out today | Sessions expire. An expired one is treated as signed out rather than half-working; sign in again |
+| The game starts but there is no OPEN//77 in it | Almost always a failed redscript compile reverting to vanilla scripts. The preflight exists to stop this, so check whether anything was installed outside the launcher |
+| The server list is empty | Clear filters, refresh and check the selected master/network; use History or Direct Connect for local servers |
+| An old launcher asks for Alpha approval | Update the launcher and sign in again. Open Alpha needs no application. If the message persists, contact support with your launcher version and diagnostics |
+
+## See also
+
+- [Your server in the launcher](launcher-for-server-owners.md) — the same
+  machinery from a server owner's side, including the deep-link contract.
+- [How the platform works](platform.md) — what OPEN//77 is, and the exact
+  requirements.
+- [Host your own server](host-a-server.md) — running a world of your own.
